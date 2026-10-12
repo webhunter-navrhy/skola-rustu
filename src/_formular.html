@@ -1,0 +1,18 @@
+{# Kontaktní formulář. Endpoint a demo režim z _data/site.json (formular.endpoint, formular.demo). #}
+<form class="formular" method="post" {% if site.formular.endpoint and not site.formular.demo %}action="{{ site.formular.endpoint }}"{% endif %} data-endpoint="{{ site.formular.endpoint }}" data-demo="{{ 1 if site.formular.demo or not site.formular.endpoint else 0 }}">
+  <label>Jméno <input name="jmeno" autocomplete="name" required></label>
+  <label>E-mail <input name="email" type="email" autocomplete="email" required></label>
+  <label class="formular-cela">O co máš zájem
+    <select name="zajem">
+      <option value="">Ještě nevím, poraďte mi</option>
+      <optgroup label="Kurzy">{% for k in data.obsah.kurzy %}<option value="{{ k.id }}">{{ k.nazev }}</option>{% endfor %}</optgroup>
+      <optgroup label="Osobní koučing">{% for k in data.obsah.koucing %}<option value="{{ k.id }}">{{ k.nazev }}</option>{% endfor %}</optgroup>
+      <option value="knihy">Knihy edice LifePOWER</option>
+    </select>
+  </label>
+  <label class="formular-cela">Zpráva <textarea name="zprava" rows="4" required></textarea></label>
+  <div class="past" aria-hidden="true"><label>Nevyplňovat <input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+  <input type="hidden" name="_subject" value="{{ site.formular.predmet }}">
+  <button type="submit" class="tl tl-hl">Odeslat zprávu</button>
+  <p class="formular-stav" role="status" aria-live="polite"></p>
+</form>

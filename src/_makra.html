@@ -1,0 +1,27 @@
+{% macro oblast(id) %}{{ (data.obsah.oblasti|selectattr('id','equalto',id)|first) }}{% endmacro %}
+
+{% macro polozka(id) -%}
+{%- set k = (data.obsah.kurzy + data.obsah.koucing)|selectattr('id','equalto',id)|first -%}
+{{ k.nazev }}
+{%- endmacro %}
+
+{% macro citat(z, velky=False) -%}
+{%- set k = (data.obsah.kurzy + data.obsah.koucing)|selectattr('id','equalto',z.k)|first -%}
+{%- set o = data.obsah.oblasti|selectattr('id','equalto',k.oblast)|first -%}
+<figure class="zisk{% if velky %} zisk-velky{% endif %}" data-typ="{{ z.typ }}" data-oblast="{{ o.id }}" style="--o: {{ o.barva }}; --ot: {{ o.text }}">
+  <blockquote><p>„{{ z.text }}“</p></blockquote>
+  <figcaption><span class="zisk-kdo">{{ z.kdo }}</span><span class="zisk-co">{{ 'koučing' if z.typ == 'koucing' else 'kurz' }} {{ k.nazev }}</span></figcaption>
+</figure>
+{%- endmacro %}
+
+{% macro obalka(kn, maly=False) -%}
+{%- if kn.obalka -%}
+{{ img(kn.obalka, 'Obálka knihy ' ~ kn.nazev, sizes='(min-width: 60rem) 16rem, 40vw', cls='obalka-img' ~ (' obalka-plocha' if kn.obalka.endswith('.jpg') else '')) }}
+{%- else -%}
+<div class="obalka-typo" style="--o: {{ kn.barva }}" role="img" aria-label="Kniha {{ kn.nazev }} (obálku doplníme)">
+  <span class="obalka-lp">LifePOWER</span>
+  <span class="obalka-nazev">{{ kn.nazev }}</span>
+  {% if kn.autor %}<span class="obalka-autor">{{ kn.autor }}</span>{% endif %}
+</div>
+{%- endif -%}
+{%- endmacro %}

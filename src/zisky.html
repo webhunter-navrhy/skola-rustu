@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+{% import "_makra.html" as m with context %}
+{% set titulek = 'Zisky studentů – co přinesly kurzy a koučing LifePOWER | Škola růstu' %}
+{% set popis = 'Zisky studentů z kurzů a procesingů Life Power: komunikace, studium, sebedůvěra, vztahy, koučing. Vlastními slovy absolventů.' %}
+{% set cesta = 'zisky/' %}
+{% block obsah %}
+{% set O = data.obsah %}
+<section class="stranka-hlava">
+  <div class="wrap stranka-hlava-in">
+    <div>
+      <h1>Zisky studentů</h1>
+      <p class="hero-perex">Ziskem říkáme to, co si člověk z&nbsp;kurzu nebo procesingu odnese do života. Tady jsou vlastními slovy absolventů.</p>
+    </div>
+    <div class="stranka-obr">{{ img('pratele.png', 'Ilustrace z knihy LifePOWER: přátelé se psem sedí v trávě', sizes='(min-width: 64rem) 22rem, 60vw') }}</div>
+  </div>
+</section>
+<section class="zisky-sekce zisky-stranka">
+  <div class="wrap">
+    <div class="filtr-oblasti" role="group" aria-label="Filtr podle oblasti">
+      <button class="kamen kamen-maly" aria-pressed="true" data-oblast="vse" style="--o:#0e2a40;--ot:#fff;--r:-2deg">Všechny</button>
+      {% for o in O.oblasti %}<button class="kamen kamen-maly" aria-pressed="false" data-oblast="{{ o.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [2,-3,1,-2,3,-1][loop.index0] }}deg">{{ o.nazev }}</button>{% endfor %}
+    </div>
+    <div class="zisky-mriz" data-zisky>
+      {% for z in O.zisky %}{{ m.citat(z) }}{% endfor %}
+    </div>
+    <p class="zdroj">Ohlasy absolventů center Life Power z&nbsp;katalogu kurzů a&nbsp;koučingu.</p>
+  </div>
+</section>
+<section class="pruh-cta">
+  <div class="wrap pruh-cta-in">
+    <p class="velky">Prošel (prošla) jsi kurzem nebo procesingem? Pošli nám svůj zisk, rádi ho tu zveřejníme.</p>
+    <a class="tl tl-hl" href="{{ url('kontakt') }}">Poslat zisk</a>
+  </div>
+</section>
+{% endblock %}

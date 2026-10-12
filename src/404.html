@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% set titulek = 'Stránka nenalezena – Škola růstu' %}
+{% set noindex = True %}
+{% block obsah %}
+<section class="stranka-hlava"><div class="wrap">
+  <h1>Tahle cesta nikam nevede</h1>
+  <p class="hero-perex">Stránku jsme nenašli. Zkus začít znovu od úvodu.</p>
+  <p><a class="tl tl-hl" href="{{ url('') }}">Na úvod</a></p>
+</div></section>
+{% endblock %}

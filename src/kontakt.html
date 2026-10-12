@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+{% set titulek = 'Kontakt – Škola růstu, LifePOWER Praha, Strašnická, Praha 10' %}
+{% set popis = 'Napiš nebo zavolej: Škola růstu – LifePOWER Praha, Strašnická 3164/1a, Praha 10, info@life-pwr.cz. Poradíme ti, kterým kurzem začít.' %}
+{% set cesta = 'kontakt/' %}
+{% block obsah %}
+<section class="stranka-hlava kontakt-stranka">
+  <div class="wrap kontakt-in">
+    <div>
+      <h1>Napiš nebo zavolej</h1>
+      <p class="hero-perex">Nevíš, kterým kurzem začít, nebo se chceš zeptat na koučing či knihy? Napiš nám pár vět, ozveme se ti.</p>
+      <ul class="kontakt-seznam" role="list">
+        <li><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></li>
+        <li><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></li>
+        <li><a href="https://mapy.com/s/?q=Strašnická%203164%2F1a%20Praha" rel="noopener">{{ site.kontakt.adresa.ulice }}, {{ site.kontakt.adresa.mesto }}</a></li>
+        <li><a href="{{ site.kontakt.instagram }}" rel="noopener">Instagram @lifepower_cz</a></li>
+      </ul>
+      <div class="kontakt-obr">{{ img('gol.png', 'Ilustrace: fotbalista dává gól a fanoušci jásají', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
+    </div>
+    {% include "_formular.html" %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,539 @@
+{
+ "oblasti": [
+  {
+   "id": "komunikace",
+   "nazev": "Komunikace a vztahy",
+   "barva": "#8cc63f",
+   "text": "#1f3d0c",
+   "otazka": "Chceš se s kýmkoli na čemkoli domluvit a mít klid v rozhovoru?",
+   "kurzy": [
+    "efektivni-komunikace"
+   ],
+   "koucing": [
+    "partnerske-vztahy"
+   ],
+   "kniha": "komunikace",
+   "zisk": [
+    "G. D.",
+    "efektivni-komunikace"
+   ],
+   "obrazek": "pratele.png"
+  },
+  {
+   "id": "studium",
+   "nazev": "Učení a studium",
+   "barva": "#f6c945",
+   "text": "#4a3400",
+   "otazka": "Učíš se, ale za týden to zapomeneš? Nebo tě studium nebaví?",
+   "kurzy": [
+    "brilantni-student"
+   ],
+   "koucing": [
+    "rodicovstvi"
+   ],
+   "kniha": "zaklady-studia",
+   "zisk": [
+    "N. M.",
+    "brilantni-student"
+   ],
+   "obrazek": "sen-o-studiu.png"
+  },
+  {
+   "id": "mysl",
+   "nazev": "Mysl a emoce",
+   "barva": "#74cff0",
+   "text": "#06364a",
+   "otazka": "Chceš pochopit, proč jednáš tak, jak jednáš, a zbavit se stresu a strachu?",
+   "kurzy": [
+    "tajemstvi-podvedomi"
+   ],
+   "koucing": [
+    "clearovaci-proces"
+   ],
+   "kniha": "lifepower",
+   "zisk": [
+    "B. H.",
+    "tajemstvi-podvedomi"
+   ],
+   "obrazek": "lupa.png"
+  },
+  {
+   "id": "sebeduvera",
+   "nazev": "Sebedůvěra a cíle",
+   "barva": "#efb98a",
+   "text": "#4d2608",
+   "otazka": "Máš výkyvy nálad a energie, nebo se těžko rozhoduješ?",
+   "kurzy": [
+    "stabilita-prosperita",
+    "integrita-jistota",
+    "zamer-kontrola"
+   ],
+   "koucing": [
+    "clearovaci-proces"
+   ],
+   "kniha": "moudrost",
+   "zisk": [
+    "G. B.",
+    "zamer-kontrola"
+   ],
+   "obrazek": "lezkyne.png"
+  },
+  {
+   "id": "prace",
+   "nazev": "Práce a podnikání",
+   "barva": "#9db8dc",
+   "text": "#0f2c52",
+   "otazka": "Vedeš tým, rozjíždíš podnikání, nebo se chceš zapojit do dobré firmy?",
+   "kurzy": [
+    "tvurce-manazer"
+   ],
+   "koucing": [],
+   "kniha": "tvurce",
+   "zisk": [
+    "A. S.",
+    "tvurce-manazer"
+   ],
+   "obrazek": "gol.png"
+  },
+  {
+   "id": "pomahat",
+   "nazev": "Pomáhat druhým",
+   "barva": "#3fae55",
+   "text": "#ffffff",
+   "otazka": "Chceš pomáhat druhým lidem a třeba se tím i živit?",
+   "kurzy": [
+    "lp-kouc"
+   ],
+   "koucing": [],
+   "kniha": "lifepower",
+   "zisk": [
+    "A. E.",
+    "lp-kouc"
+   ],
+   "obrazek": "zahradnik-zalevani.png"
+  }
+ ],
+ "kurzy": [
+  {
+   "id": "tajemstvi-podvedomi",
+   "nazev": "Tajemství podvědomí",
+   "oblast": "mysl",
+   "uroven": "Kurz na zlepšení života",
+   "perex": "Na tomto kurzu se dozvíš o základních principech Life Power pro zmírnění strachu, stresu, nízkého sebevědomí a trýznivých myšlenek.",
+   "naucis": [
+    "Jak je strukturována naše mysl a co je to podvědomí?",
+    "Jak nás podvědomí ovlivňuje pod úrovní našeho vědomí?",
+    "Co je to škála emocí a jak můžeme zlepšit svůj emoční stav?"
+   ]
+  },
+  {
+   "id": "brilantni-student",
+   "nazev": "Brilantní student",
+   "oblast": "studium",
+   "uroven": "Kurz na zlepšení života",
+   "kniha": "zaklady-studia",
+   "stara_stranka": "Základy studia",
+   "perex": "Měl(a) jsi někdy potíže se soustředěním při studiu? Naučil(a) ses něco, ale pak to zapomněl(a)? To, co z tebe udělá zářící hvězdu v nějakém oboru, není talent, ale znalost zákonitostí studia.",
+   "naucis": [
+    "Jak překonat rušivé vlivy při studiu?",
+    "Jak rozpoznat překážky ve studiu a okamžitě je odstranit?",
+    "Jaké je tajemství zvýšení rychlosti studia a plného porozumění učivu?",
+    "Jak pomoci ostatním správně studovat a překonat nutkání studium vzdát?"
+   ]
+  },
+  {
+   "id": "efektivni-komunikace",
+   "nazev": "Efektivní komunikace",
+   "oblast": "komunikace",
+   "uroven": "Kurz na zlepšení života",
+   "kniha": "komunikace",
+   "perex": "Chceš být sebevědomý(á), otevřený(á) a schopný(á) mluvit s kýmkoli o čemkoli? Po důkladném absolvování osmi komunikačních cvičení dokážeš prodat své nápady a přimět lidi, aby s tebou spolupracovali.",
+   "naucis": [
+    "Zlepšíš své soustředění, abys komunikací dosáhl(a) toho, co chceš.",
+    "Rozvineš mentální „odolnost“ vůči tomu, co říkají nebo dělají ostatní.",
+    "Naučíš se vést jakoukoli konverzaci nebo společenskou situaci."
+   ]
+  },
+  {
+   "id": "zamer-kontrola",
+   "nazev": "Záměr a kontrola",
+   "oblast": "sebeduvera",
+   "uroven": "Kurz na zlepšení života",
+   "kniha": "kz",
+   "perex": "Dokážeme nasměrovat svůj život tam, kam chceme? Rozhodně ano. V tomto kurzu si pomocí pěti cvičení osvojíš schopnost ovládat své prostředí, dokud se nenaučíš používat dokonalý záměr.",
+   "naucis": [
+    "Jak snadno přimět lidi, aby s tebou spolupracovali?",
+    "Jak uskutečnit své záměry a vyzařovat vnitřní sílu?",
+    "Jak být rozhodný(á) a přitom naprosto klidný(á) a sebevědomý(á)?"
+   ]
+  },
+  {
+   "id": "stabilita-prosperita",
+   "nazev": "Dosažení stability a prosperity",
+   "oblast": "sebeduvera",
+   "uroven": "Kurz na zlepšení života",
+   "perex": "Proč přicházejí výkyvy nálady, sebevědomí a energie? Kurz ti pomůže poradit si s negativními vlivy, které narušují tvůj život. Zjistíš, že i ty můžeš být emocionálně stabilní a mít nadšení pro vlastní tvoření.",
+   "naucis": [
+    "Co je jediným důvodem výkyvů v emocích, sebevědomí a energii?",
+    "Objevíš hlavní zdroj nestability a způsob, jak ho překonat.",
+    "Strategie pro zvládání „horské dráhy“, abys mohl(a) stabilně prosperovat."
+   ]
+  },
+  {
+   "id": "integrita-jistota",
+   "nazev": "Integrita a jistota",
+   "oblast": "sebeduvera",
+   "uroven": "Kurz na zlepšení života",
+   "perex": "Těžko se rozhoduješ nebo lituješ minulých neúspěchů? Díky tomuto kurzu se osvobodíš od minulých chyb a získáš jistotu ohledně své budoucnosti.",
+   "naucis": [
+    "Co je jediným zdrojem sebedestrukce a jak se ho zbavit?",
+    "Jak dělat správná rozhodnutí a udržet rovnováhu mezi oblastmi života.",
+    "Jak mít vysoké sebevědomí a zároveň vytvářet harmonii s ostatními.",
+    "Jak zůstat věrný(á) svým cílům navzdory tlakům okolí."
+   ]
+  },
+  {
+   "id": "lp-kouc",
+   "nazev": "Life Power kouč",
+   "oblast": "pomahat",
+   "uroven": "Life Power Profesionál",
+   "kniha": "lifepower",
+   "stara_stranka": "LifePOWER KOUČ",
+   "perex": "I ty se můžeš stát Life Power koučem, který pomáhá ostatním žít život, jaký vždy chtěli. Osvojíš si nástroje, s jejichž pomocí můžeš pomáhat druhým rozvíjet schopnosti a osvobodit se od úzkosti a zábran. Po dokončení získáš certifikát Life Power kouče.",
+   "naucis": [
+    "Účinné nástroje, které zlepší i tvůj vlastní život.",
+    "Odborné znalosti pro kvalifikovaného LP kouče.",
+    "Sám (sama) absolvuješ clearovací procesy.",
+    "Můžeš spolupracovat s ostatními studenty a připojit se ke globální síti Life Power."
+   ]
+  },
+  {
+   "id": "tvurce-manazer",
+   "nazev": "Tvůrce a manažer organizace",
+   "oblast": "prace",
+   "uroven": "Life Power Profesionál",
+   "kniha": "tvurce",
+   "perex": "Všichni jsme součástí nějaké organizace: rodiny, práce, přátel nebo vlastního podniku. Kurz vychází z knihy Executive Freedom a dá ti nástroje k vybudování organizace, která se stabilně rozvíjí k vytyčeným cílům.",
+   "naucis": [
+    "Tři základní stavební kameny každé organizace a jak je sladit.",
+    "Škála úspěšnosti, která ti pomůže stanovit si cíle a dosáhnout jich.",
+    "Jak vytvořit úspěšný tým a řešit potíže se zaměstnanci, dodavateli a zákazníky.",
+    "Jak pracovat se statistikami a přesně sledovat stav firmy."
+   ]
+  }
+ ],
+ "koucing": [
+  {
+   "id": "clearovaci-proces",
+   "nazev": "Clearovací proces",
+   "oblast": "mysl",
+   "perex": "Strachy, zábrany, negativní emoce, pochybnosti a nedostatek sebevědomí při setkání s ostatními jsou projevy „vnitřního nepřítele“. Tvůj Life Power kouč spolu se specialistou na clearovací proces navrhne program, který odstraní vnitřní překážky, které tě brzdí.",
+   "ziskas": [
+    "Optimistický pohled na život, víc energie a vitality.",
+    "Vysoké sebevědomí, lepší komunikaci a vztahy.",
+    "Bytí „tady a teď“, lepší paměť, klid a soustředění."
+   ]
+  },
+  {
+   "id": "partnerske-vztahy",
+   "nazev": "Partnerské vztahy",
+   "oblast": "komunikace",
+   "perex": "Program „šitý na míru“, který odstraní bariéry mezi tebou a partnerem, obnoví důvěru a dá vám nástroje pro plánování společné budoucnosti. Šťastné vztahy postavené na lepší komunikaci.",
+   "ziskas": [
+    "Lepší komunikace v páru.",
+    "Obnovená důvěra.",
+    "Nástroje pro společnou budoucnost."
+   ]
+  },
+  {
+   "id": "rodicovstvi",
+   "nazev": "Rodičovství a výchova dětí",
+   "oblast": "studium",
+   "perex": "„Kdybych se tyto nástroje naučil v mladém věku, můj život by byl úplně jiný.“ Díky osobnímu koučování mohou děti už v raném věku získat nejdůležitější nástroje pro život.",
+   "ziskas": [
+    "Lepší studijní schopnosti a komunikační dovednosti.",
+    "Sebevědomí a emoční stabilita.",
+    "Osobní integrita a rozumnější uvažování."
+   ]
+  },
+  {
+   "id": "stav-clear",
+   "nazev": "Cesta ke stavu Clear",
+   "oblast": "mysl",
+   "perex": "Slovo „Clear“ označuje jedinečný stav vědění, bdělosti a svobody v jednání a emocích. Odborníci Life Power ti navrhnou jedinečný program z řady clearovacích procesů v rámci programu Cesta k duchovní svobodě.",
+   "ziskas": [
+    "Jasná mysl bez nežádoucích reakcí.",
+    "Odolnost v náročných situacích.",
+    "Otevřenost a upřímnost ve vztazích."
+   ]
+  }
+ ],
+ "cesta": [
+  {
+   "nazev": "Studium knihy LifePOWER",
+   "text": "Porozumění lidské existenci, získání nástrojů pro zlepšení života.",
+   "start": true
+  },
+  {
+   "nazev": "Proces na konfrontaci života",
+   "text": "Obnovuje ochotu čelit světu a pohodlně ho prožívat."
+  },
+  {
+   "nazev": "Procesy na vybavování",
+   "text": "Stoupání na stupnici emocí, zlepšení paměti a uvědomění si duchovního pokroku."
+  },
+  {
+   "nazev": "Osobní koučing",
+   "text": "Osvobozuje od minulých škodlivých činů a dává nástroje pro vyšší sebevědomí."
+  },
+  {
+   "nazev": "Základní clearovací proces",
+   "text": "Zvládání podvědomí, osvobození od traumat, zlepšení osobních schopností."
+  },
+  {
+   "nazev": "Stupně 0 až 4",
+   "text": "Vyšší schopnosti v komunikaci, řešení problémů a osvobození od minulých rozrušení."
+  },
+  {
+   "nazev": "Pokročilý clearovací proces",
+   "text": "Proces, který odstraní reaktivní mysl a účinky minulých traumat."
+  },
+  {
+   "nazev": "Clear",
+   "text": "Člověk, který už nemá svoji reaktivní mysl.",
+   "cil": true
+  }
+ ],
+ "knihy": [
+  {
+   "id": "lifepower",
+   "nazev": "Life Power",
+   "podtitul": "Dosažení osobní moci ve všech oblastech života",
+   "autor": "Dani Lemberger",
+   "obalka": "kniha-lifepower.png",
+   "barva": "#74cff0",
+   "text": "Základní kniha celé edice. Najdeš v ní základní informace pro pochopení života a procesy, díky nimž objevíš, kým skutečně jsi a jaký je tvůj plný potenciál."
+  },
+  {
+   "id": "komunikace",
+   "nazev": "Kompletní komunikační příručka",
+   "podtitul": "„Člověk je natolik živý, nakolik dokáže komunikovat“",
+   "autor": "Dani Lemberger",
+   "obalka": "kniha-komunikace.png",
+   "barva": "#8cc63f",
+   "text": "Vše, co máš nebo o co usiluješ, je výsledkem spolupráce s ostatními. Osm praktických cvičení, po kterých se domluvíš s kýmkoli na čemkoli."
+  },
+  {
+   "id": "zaklady-studia",
+   "nazev": "Základy studia",
+   "podtitul": "„Jediným skutečným bohatstvím je porozumění.“",
+   "autor": "Dani Lemberger",
+   "obalka": "kniha-zaklady-studia.png",
+   "barva": "#f6c945",
+   "text": "Studijní technologie: jak se učit se záměrem nastudované použít v praxi a jak překonat bariéry, které brzdí tvůj pokrok."
+  },
+  {
+   "id": "pribeh-ducha",
+   "nazev": "Příběh ducha",
+   "podtitul": "Odpovědi, které jste vždy chtěli slyšet",
+   "autor": "Aviv Paz",
+   "obalka": "kniha-pribeh-ducha.jpg",
+   "barva": "#ead3ae",
+   "text": "Kniha edice Life Power o duchovní stránce člověka."
+  },
+  {
+   "id": "tvurce",
+   "nazev": "Tvůrce a manažer organizace",
+   "podtitul": "Konečným produktem organizace je svoboda",
+   "autor": "",
+   "obalka": "",
+   "barva": "#9db8dc",
+   "text": "Znalosti, které potřebuješ, abys mohl(a) vytvořit organizaci, kde všichni prosperují a každý dosahuje svých cílů při zachování osobní svobody."
+  },
+  {
+   "id": "kz",
+   "nazev": "Příběh K&Z",
+   "podtitul": "Teorie a praxe kontroly a záměru",
+   "autor": "",
+   "obalka": "",
+   "barva": "#efb98a",
+   "text": "Formulování cílů a jejich bezproblémové dosahování. Schopnosti, které jsou v příručce procvičovány k dokonalosti."
+  },
+  {
+   "id": "moudrost",
+   "nazev": "S moudrostí k vítězství",
+   "podtitul": "Život s jistotou a prosperitou",
+   "autor": "Carmela Weizman",
+   "obalka": "",
+   "barva": "#f3a7a0",
+   "text": "Autorka má přes 20 let zkušeností jako osobní koučka a pracovala se stovkami dospělých i teenagerů. Jednoduché, ale účinné nástroje pro stabilní život."
+  },
+  {
+   "id": "efektivita",
+   "nazev": "Efektivita tvojí mysli",
+   "podtitul": "Anatomie mysli a zvýšení jejího výkonu",
+   "autor": "",
+   "obalka": "",
+   "barva": "#b9e3f3",
+   "text": "Shrnutí klíčových principů z knihy Life Power: tři části osobnosti, funkce lidské mysli a snadno použitelné techniky."
+  }
+ ],
+ "zisky": [
+  {
+   "kdo": "S. C.",
+   "k": "tajemstvi-podvedomi",
+   "text": "Vždy jsem chtěl lépe porozumět tajemstvím mysli a podvědomí – a přesně to jsem se naučil!",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "B. H.",
+   "k": "tajemstvi-podvedomi",
+   "text": "Tento kurz mi pomohl porozumět sám sobě! Proč se chovám tak, jak se chovám, a jak se mohu zlepšit. Vyzkoušel jsem LP Processing a zjistil jsem, že to funguje! Těším se na pokračování.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "Y. M.",
+   "k": "brilantni-student",
+   "text": "Fascinující kurz. Znalosti z kurzu Brilantní student mi dodávají sebevědomí, že se mohu naučit cokoli a uplatnit to v praxi.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "N. M.",
+   "k": "brilantni-student",
+   "text": "Tento kurz mi pomohl zlepšit schopnost učit se. Kdybych měl tyto informace už ve škole, můj život by vypadal naprosto jinak! Teď pomáhám s učením svým dcerám.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. K.",
+   "k": "efektivni-komunikace",
+   "text": "Změnilo mi to život! Kurz nabízí skvělou kombinaci teoretických znalostí a praktických cvičení. Nyní jsem schopen čelit jakékoli výzvě a situaci!",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "G. D.",
+   "k": "efektivni-komunikace",
+   "text": "Jsem pozornější a vnímavější k ostatním lidem, cítím se sebejistější v konverzaci, méně introvertní. Moje komunikace se výrazně zlepšila.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "G. B.",
+   "k": "zamer-kontrola",
+   "text": "Díky nástrojům z kurzu Záměr a kontrola vím, že když se pro něco rozhodnu, tak se to prostě stane. Protože teď dokážu věci uskutečnit.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "Y. M.",
+   "k": "zamer-kontrola",
+   "text": "Vynikající kurz, který jednoduše učí, jak získat sílu ve všech oblastech života. Situace, které mě dříve frustrovaly, dnes probíhají snadno a efektivně.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. N.",
+   "k": "stabilita-prosperita",
+   "text": "Dostal jsem se z nejhorší pasti: ze vzestupů a pádů v životě! Už mě neovlivňují lidé, kteří se mě snaží srazit, a věřím si!",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. L.",
+   "k": "stabilita-prosperita",
+   "text": "Moje okolí mě už neovlivňuje tak jako dřív! Dnes si vedu ve svém podnikání mnohem úspěšněji a ve větší pohodě!",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. A.",
+   "k": "integrita-jistota",
+   "text": "Naučil jsem se, jak přestat ničit sám sebe a být tak svobodný. Tento kurz doporučuji každému, kdo chce být v klidu při každém rozhodnutí a činu.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "D. V.",
+   "k": "integrita-jistota",
+   "text": "Toto je kurz, který mě nejvíce změnil – vyjasnil jsem si své hodnoty a pochopil jsem, kdo jsem. Lidé mě respektují a je pro mě snadné se za sebe postavit.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "T. L. K.",
+   "k": "lp-kouc",
+   "text": "V LifePower jsem objevil, že mým cílem je vytvořit lepší svět. Lépe rozumím životu a mohu vést ostatní, kteří toho chtějí dosáhnout.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. Y.",
+   "k": "lp-kouc",
+   "text": "Získala jsem nástroje pro život, které mi zůstanou navždy. Dnes jsem živější, energičtější a šťastnější. Mám silnou touhu pomáhat ostatním.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. E.",
+   "k": "lp-kouc",
+   "text": "Když jsem prováděla processing své kamarádce, viděla jsem, jaké velké pokroky dělá a že se cítí mnohem lépe. Jsem tak pyšná, že jsem kurz dokončila a nyní jsem profesionální LP kouč.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "A. S.",
+   "k": "tvurce-manazer",
+   "text": "Před kurzem jsem vedl tým pěti inženýrů a měl jsem pocit, že mám příliš mnoho povinností. Dnes vedu oddělení s 28 zaměstnanci. Jsem soustředěný a mám klid v duši.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "U. H.",
+   "k": "tvurce-manazer",
+   "text": "Do LifePower jsem přišel, když jsem byl na pokraji bankrotu. Absolvoval jsem několik kurzů a osobní koučink. Je pro mě snadné řídit sebe i ostatní lidi.",
+   "typ": "kurz"
+  },
+  {
+   "kdo": "G. H.",
+   "k": "clearovaci-proces",
+   "text": "Díky tomuto procesu jsem se zbavila mentální zátěže, která mi bránila ve vlastním životním pokroku. Cítím se skvěle a směřuji ke svým cílům!",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "L. B.",
+   "k": "clearovaci-proces",
+   "text": "Dnes se cítím být zralým člověkem a mám vysoké sebevědomí. Moje schopnosti i emoce se zlepšily. Děkuji týmu LifePower.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "A. M.",
+   "k": "clearovaci-proces",
+   "text": "Dnes jsem absolvoval clearovací proces a byla to velká zábava! Mnoho starostí jsem nechal za sebou a vím, že mě čeká nová cesta. Velké díky mému koučovi.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "S. S. a A. S.",
+   "k": "partnerske-vztahy",
+   "text": "Přišli jsme těsně před svatbou, ale na pokraji rozchodu. Během měsíce jsme vyřešili problémy, které jsme mezi sebou měli, a naše komunikace se dramaticky zlepšila.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "G. R.",
+   "k": "partnerske-vztahy",
+   "text": "Úžasný program! Přijela jsem rozzlobená a neschopná vypořádat se se situací doma. Po absolvování cvičení jsme se opět stali stabilním a milujícím párem.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "N., 12 let",
+   "k": "rodicovstvi",
+   "text": "Před spolužáky jsem mnohem sebevědomější, cítím se mnohem svobodnější! Konečně vycházím s rodiči a užívám si života.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "A., 10 let",
+   "k": "rodicovstvi",
+   "text": "Teď, když jsem se naučil, jak se učit, už ve škole netrpím! Chci uspět! A vím, že můj úspěch závisí jen na mně.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "R. S.",
+   "k": "stav-clear",
+   "text": "Dnes jsem konečně dosáhl stavu Clear! Je to úžasný stav klidu a sebevědomí, který jsem nikdy předtím nezažil. Vždycky se mi to zdálo tak vzdálené, ale bylo to na dosah ruky.",
+   "typ": "koucing"
+  },
+  {
+   "kdo": "D. J.",
+   "k": "stav-clear",
+   "text": "Cítím se skvěle! Jsem klidná, sebevědomá, taková, jaká jsem vždy chtěla být. Už nemám žádná skrytá břemena, která jsem s sebou nosila.",
+   "typ": "koucing"
+  }
+ ]
+}

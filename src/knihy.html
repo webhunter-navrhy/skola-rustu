@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+{% import "_makra.html" as m with context %}
+{% set titulek = 'Knihy edice LifePOWER – Life Power, Základy studia, Komunikační příručka | Škola růstu' %}
+{% set popis = 'Knihy edice Life Power v češtině: Life Power, Kompletní komunikační příručka, Základy studia, Příběh ducha a další. K samostudiu i jako základ kurzů.' %}
+{% set cesta = 'knihy/' %}
+{% block obsah %}
+{% set O = data.obsah %}
+<section class="stranka-hlava">
+  <div class="wrap">
+    <h1>Knihy edice LifePOWER</h1>
+    <p class="hero-perex">Life Power je aplikovaná filozofie, která umožňuje každému rozvíjet své schopnosti a&nbsp;zlepšovat všechny oblasti života. Knihy můžeš studovat sám (sama) a&nbsp;procvičovat doma, nebo s&nbsp;nimi projít kurz v&nbsp;naší akademii.</p>
+  </div>
+</section>
+<section class="knihy-seznam">
+  <div class="wrap">
+    {% for kn in O.knihy %}
+    <article class="kniha" id="{{ kn.id }}" style="--o:{{ kn.barva }}">
+      <div class="kniha-obal">{{ m.obalka(kn) }}</div>
+      <div class="kniha-text">
+        <h2>{{ kn.nazev }}</h2>
+        <p class="kniha-pod">{{ kn.podtitul }}{% if kn.autor %} · {{ kn.autor }}{% endif %}</p>
+        <p>{{ kn.text }}</p>
+        {% set ks = O.kurzy|selectattr('kniha','defined')|selectattr('kniha','equalto',kn.id)|list %}
+        {% if ks %}<p class="kniha-kurz">Kurz k&nbsp;této knize: {% for k in ks %}<a href="{{ url('kurzy') }}#{{ k.id }}">{{ k.nazev }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+        <a class="sipka" href="{{ url('kontakt') }}?zajem=knihy">Chci knihu</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

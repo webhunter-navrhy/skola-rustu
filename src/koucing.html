@@ -1,0 +1,58 @@
+{% extends "_base.html" %}
+{% import "_makra.html" as m with context %}
+{% set titulek = 'Osobní koučing a procesingy LifePOWER v Praze | Škola růstu' %}
+{% set popis = 'Osobní koučing Life Power v Praze: clearovací proces, partnerské vztahy, rodičovství a výchova dětí, cesta ke stavu Clear. Program na míru s kvalifikovaným koučem.' %}
+{% set cesta = 'koucing/' %}
+{% block obsah %}
+{% set O = data.obsah %}
+<section class="stranka-hlava">
+  <div class="wrap stranka-hlava-in">
+    <div>
+      <h1>Osobní koučing a&nbsp;procesingy</h1>
+      <p class="hero-perex">V&nbsp;rámci osobního koučinku LifePower dostaneš procesy nastavené přímo pro tebe, vedené kvalifikovaným koučem. Pomohou odstranit vnitřní bariéry a&nbsp;výsledkem je znovuzískání síly, sebedůvěry a&nbsp;vyrovnanosti.</p>
+      <p>Každý člověk je nezaměnitelná osobnost. Služby ti poskytnou profesionálové, kteří prošli odborným tréninkem.</p>
+    </div>
+    <div class="stranka-obr">{{ img('zahradnik-zalevani.png', 'Ilustrace: zahradník zalévá mladé stromky', sizes='(min-width: 64rem) 20rem, 50vw') }}</div>
+  </div>
+</section>
+
+<section class="programy" aria-label="Programy koučingu">
+  <div class="wrap programy-mriz">
+    {% for k in O.koucing %}{% set o = O.oblasti|selectattr('id','equalto',k.oblast)|first %}
+    <article class="program" id="{{ k.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }}">
+      <h2>{{ k.nazev }}</h2>
+      <p>{{ k.perex }}</p>
+      <ul class="odrazky">{% for n in k.ziskas %}<li>{{ n }}</li>{% endfor %}</ul>
+      {% for z in O.zisky if z.k == k.id %}{% if loop.index <= 1 %}{{ m.citat(z) }}{% endif %}{% endfor %}
+      <a class="sipka" href="{{ url('kontakt') }}?zajem={{ k.id }}">Zeptat se na {{ k.nazev|lower if k.id != 'stav-clear' else 'cestu ke Clear' }}</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cesta-clear" aria-labelledby="clear-h">
+  <div class="wrap cesta-clear-in">
+    <div class="cesta-clear-text">
+      <h2 id="clear-h">Cesta k&nbsp;duchovní svobodě</h2>
+      <p>Procesy jsou uspořádané do stupňů. Krok za krokem zvyšují schopnosti a&nbsp;vědomí člověka. Začíná se knihou, končí se stavem Clear. Vedle toho můžeš projít kurzy Life Power kouče a&nbsp;sám (sama) vést ostatní.</p>
+      <p><a class="sipka" href="{{ base }}soubory/slovnik-life-power.pdf">Slovník pojmů (PDF)</a></p>
+    </div>
+    <ol class="schody" role="list">
+      {% for s in O.cesta %}
+      <li class="schod{% if s.get("start") %} schod-start{% endif %}{% if s.get("cil") %} schod-cil{% endif %}" style="--i:{{ loop.index0 }}">
+        <span class="schod-kamen" aria-hidden="true"></span>
+        <div><h3>{{ s.nazev }}</h3><p>{{ s.text }}</p></div>
+        {% if s.get("start") %}<span class="rucne schod-rucne">Tady začínáš</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="pruh-cta">
+  <div class="wrap pruh-cta-in">
+    <p class="velky">Koučing začíná rozhovorem. Napiš nám, s&nbsp;čím chceš pohnout, a&nbsp;navrhneme ti program.</p>
+    <a class="tl tl-hl" href="{{ url('kontakt') }}">Napiš nám</a>
+  </div>
+</section>
+{% endblock %}

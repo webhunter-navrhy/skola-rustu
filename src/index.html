@@ -1,0 +1,150 @@
+{% extends "_base.html" %}
+{% import "_makra.html" as m with context %}
+{% set titulek = 'Škola růstu – LifePOWER Praha | kurzy, koučing a knihy pro osobní růst' %}
+{% set cesta = '' %}
+{% block telo %}uvod{% endblock %}
+{% block obsah %}
+{% set O = data.obsah %}
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="hero-nad">Škola růstu · LifePOWER Praha</p>
+      <h1>Objev své schopnosti</h1>
+      <p class="hero-perex">Poznej a používej zákonitosti života, o&nbsp;kterých ti ve škole neřekli. Kurzy, osobní koučing a&nbsp;knihy pro každého, kdo chce víc rozumět sobě i&nbsp;druhým a&nbsp;dosahovat svých cílů s&nbsp;klidem.</p>
+      <div class="hero-akce">
+        <a class="tl tl-hl" href="#oblasti">Kde chceš růst?</a>
+        <a class="tl tl-obrys" href="{{ url('kurzy') }}">Všechny kurzy</a>
+      </div>
+    </div>
+    <div class="hero-obr">
+      {{ img('kopec-vlajka.png', 'Ilustrace z knihy LifePOWER: dívka na vrcholu kopce z kamenů zapichuje vlajku', sizes='(min-width: 64rem) 46vw, 92vw') }}
+      <p class="rucne hero-rucne">tvůj cíl</p>
+    </div>
+  </div>
+</section>
+
+<section class="oblasti" id="oblasti" aria-labelledby="oblasti-h">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <h2 id="oblasti-h">Kde chceš růst?</h2>
+      <p>Každý kámen je jedna oblast života. Vyber si tu, která tě teď nejvíc zajímá, a&nbsp;ukážeme ti kurz, koučing a&nbsp;knihu, kterými můžeš začít.</p>
+    </div>
+    <div class="kopec">
+      <div class="kopec-cesta" role="tablist" aria-label="Oblasti života">
+        <svg class="cesta-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path class="cesta-stin" d="M10 97 C13.0 94.8 19.0 87.7 28 84 C37.0 80.3 63.3 79.0 64 75 C64.7 71.0 31.3 64.8 32 60 C32.7 55.2 67.7 50.8 68 46 C68.3 41.2 34.7 35.8 34 31 C33.3 26.2 55.7 21.3 64 17 C72.3 12.7 80.7 7.0 84 5"/>
+          <path class="cesta-cara" pathLength="1" d="M10 97 C13.0 94.8 19.0 87.7 28 84 C37.0 80.3 63.3 79.0 64 75 C64.7 71.0 31.3 64.8 32 60 C32.7 55.2 67.7 50.8 68 46 C68.3 41.2 34.7 35.8 34 31 C33.3 26.2 55.7 21.3 64 17 C72.3 12.7 80.7 7.0 84 5"/>
+        </svg>
+        <span class="rucne kopec-start" style="--x:10%;--y:97%">Tady začínáš</span>
+        <span class="kopec-vlajka" style="--x:84%;--y:5%" aria-hidden="true"><svg viewBox="0 0 40 48"><path d="M6 46V3" stroke="#0e2a40" stroke-width="3" stroke-linecap="round"/><path d="M7.5 4 C16 1 22 9 35 5 L30 15 L36 24 C23 28 16 20 7.5 23Z" fill="#e5332a"/></svg></span>
+        {% set poz = [(28,84),(64,75),(32,60),(68,46),(34,31),(64,17)] %}
+        {% for o in O.oblasti %}
+        <button class="kamen" role="tab" id="tab-{{ o.id }}" aria-controls="panel-{{ o.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}"
+          style="--x:{{ poz[loop.index0][0] }}%;--y:{{ poz[loop.index0][1] }}%;--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [-4,3,-2,5,-3,2][loop.index0] }}deg">{{ o.nazev }}</button>
+        {% endfor %}
+      </div>
+      <div class="kopec-panely">
+        {% for o in O.oblasti %}
+        <div class="panel" role="tabpanel" id="panel-{{ o.id }}" aria-labelledby="tab-{{ o.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }}" {% if not loop.first %}data-skryt{% endif %}>
+          <p class="panel-stitek">{{ o.nazev }}</p>
+          <h3>{{ o.otazka }}</h3>
+          <dl class="panel-cesty">
+            <div><dt>Kurz</dt><dd>{% for k in o.kurzy %}<a href="{{ url('kurzy') }}#{{ k }}">{{ m.polozka(k) }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</dd></div>
+            {% if o.koucing %}<div><dt>Koučing</dt><dd>{% for k in o.koucing %}<a href="{{ url('koucing') }}#{{ k }}">{{ m.polozka(k) }}</a>{% endfor %}</dd></div>{% endif %}
+            {% set kn = O.knihy|selectattr('id','equalto',o.kniha)|first %}
+            <div><dt>Kniha</dt><dd><a href="{{ url('knihy') }}#{{ kn.id }}">{{ kn.nazev }}</a></dd></div>
+          </dl>
+          {% set z = O.zisky|selectattr('kdo','equalto',o.zisk[0])|selectattr('k','equalto',o.zisk[1])|first %}
+          <blockquote class="panel-zisk"><p>„{{ z.text }}“</p><footer>{{ z.kdo }}, kurz {{ m.polozka(z.k) }}</footer></blockquote>
+          <div class="panel-obr">{{ img(o.obrazek, '', sizes='(min-width: 64rem) 14rem, 40vw') }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dve-cesty" aria-labelledby="dve-h">
+  <div class="wrap">
+    <h2 id="dve-h" class="sekce-h">Dvě cesty, jedno místo</h2>
+    <div class="dve-mriz">
+      <article class="cesta-blok">
+        <div class="cesta-obr">{{ img('student.png', 'Ilustrace: chlapec se učí u psacího stolu', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
+        <h3>Kurzy na zvýšení schopností</h3>
+        <p>Učíš se a&nbsp;hned procvičuješ pod vedením odborníka. Kurzy jdou tvým vlastním tempem a&nbsp;můžeš začít kdykoli. Nejdřív pochopíš principy, pak si je vyzkoušíš v&nbsp;praxi.</p>
+        <a class="sipka" href="{{ url('kurzy') }}">Katalog kurzů</a>
+      </article>
+      <article class="cesta-blok">
+        <div class="cesta-obr">{{ img('zahradnici-sazenice.png', 'Ilustrace: zahradníci sázejí a zalévají mladé stromky', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
+        <h3>Osobní koučing a&nbsp;procesingy</h3>
+        <p>Program nastavený přímo pro tebe, vedený kvalifikovaným koučem. Pomůže odstranit vnitřní bariéry a&nbsp;vrátí ti sílu, sebedůvěru a&nbsp;vyrovnanost.</p>
+        <a class="sipka" href="{{ url('koucing') }}">Jak koučing probíhá</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="zisky-sekce" aria-labelledby="zisky-h">
+  <div class="wrap">
+    <div class="sekce-hlava sekce-hlava-r">
+      <h2 id="zisky-h">Zisky studentů</h2>
+      <p>Co lidem přinesly kurzy a&nbsp;procesingy, jejich vlastními slovy.</p>
+      <div class="prepinac" role="group" aria-label="Filtr zisků">
+        <button aria-pressed="true" data-filtr="vse">Vše</button>
+        <button aria-pressed="false" data-filtr="kurz">Z kurzů</button>
+        <button aria-pressed="false" data-filtr="koucing">Z koučingu</button>
+      </div>
+    </div>
+    <div class="zisky-mriz" data-zisky>
+      {% for z in O.zisky if z.kdo in ['B. H.','A. K.','N. M.','G. H.','S. S. a A. S.','A. S.','D. V.','N., 12 let','A. E.'] %}{{ m.citat(z) }}{% endfor %}
+    </div>
+    <p class="zdroj">Ohlasy absolventů center Life Power z katalogu kurzů. <a class="sipka" href="{{ url('zisky') }}">Všech {{ O.zisky|length }} zisků</a></p>
+  </div>
+</section>
+
+<section class="knihy-sekce" aria-labelledby="knihy-h">
+  <div class="wrap">
+    <div class="sekce-hlava">
+      <h2 id="knihy-h">Knihy edice LifePOWER</h2>
+      <p>Na knihách stojí všechny kurzy. Můžeš je číst samostatně a&nbsp;procvičovat doma, nebo s&nbsp;nimi projít kurz.</p>
+    </div>
+    <ul class="policka" role="list">
+      {% for kn in O.knihy if kn.obalka %}
+      <li><a href="{{ url('knihy') }}#{{ kn.id }}">{{ m.obalka(kn) }}<span class="kniha-nazev">{{ kn.nazev }}</span></a></li>
+      {% endfor %}
+    </ul>
+    <p><a class="sipka" href="{{ url('knihy') }}">Celá edice ({{ O.knihy|length }} knih)</a></p>
+  </div>
+</section>
+
+<section class="o-nas" aria-labelledby="onas-h">
+  <div class="wrap o-nas-in">
+    <div class="o-nas-obr">{{ img('lezkyne.png', 'Ilustrace z knihy LifePOWER: dívka šplhá po chytech a myslí na svůj cíl', sizes='(min-width: 64rem) 24rem, 60vw') }}</div>
+    <div class="o-nas-text">
+      <h2 id="onas-h">Oáza klidu pro učení a&nbsp;sebepoznání</h2>
+      <p class="velky">Vítám Tě v&nbsp;naší Škole růstu, kde se s&nbsp;námi můžeš vydat na cestu ke spokojenému a&nbsp;úspěšnému životu.</p>
+      <p>V&nbsp;naší vzdělávací akademii se ti budou věnovat certifikovaní koučové a&nbsp;supervizoři. Učíme podle technologie Life Power, kterou v&nbsp;roce 2018 popsal Dani Lemberger v&nbsp;knize Life Power. Pražské centrum patří do mezinárodní sítě center Life Power, která působí například v&nbsp;Rize, Haifě a&nbsp;Tel Avivu.</p>
+      <ul class="fakta" role="list">
+        <li><strong>Strašnická 3164/1a</strong> Praha 10</li>
+        <li><strong>Kdykoli</strong> kurz můžeš začít, kdy se ti to hodí</li>
+        <li><strong>Vlastním tempem</strong> s&nbsp;odborným vedením</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kontakt-pas" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap kontakt-in">
+    <div>
+      <h2 id="kontakt-h">Napiš nebo zavolej</h2>
+      <p>Nevíš, kterým kurzem začít? Napiš nám, co tě zajímá, a&nbsp;poradíme ti první krok.</p>
+      <ul class="kontakt-seznam" role="list">
+        <li><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></li>
+        <li><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></li>
+        <li>{{ site.kontakt.adresa.ulice }}, {{ site.kontakt.adresa.mesto }}</li>
+      </ul>
+    </div>
+    {% include "_formular.html" %}
+  </div>
+</section>
+{% endblock %}

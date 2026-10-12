@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+{% import "_makra.html" as m with context %}
+{% set titulek = 'Kurzy LifePOWER v Praze – komunikace, studium, sebedůvěra | Škola růstu' %}
+{% set popis = 'Katalog kurzů Školy růstu podle oblastí: Efektivní komunikace, Brilantní student, Tajemství podvědomí, Záměr a kontrola, Life Power kouč a další. Praha 10.' %}
+{% set cesta = 'kurzy/' %}
+{% block obsah %}
+{% set O = data.obsah %}
+<section class="stranka-hlava">
+  <div class="wrap stranka-hlava-in">
+    <div>
+      <h1>Kurzy na zvýšení schopností</h1>
+      <p class="hero-perex">Na kurzech se učíš a&nbsp;nabyté schopnosti procvičuješ pod odborným vedením, tvým vlastním tempem. Pochopení principů je první krok, pak následuje praxe. Najdeš tu návod, jak zabudovat do života nové zvyky.</p>
+    </div>
+    <div class="stranka-obr">{{ img('sen-o-studiu.png', 'Ilustrace z knihy Základy studia: muž v plášti s diplomem vzpomíná na studium', sizes='(min-width: 64rem) 20rem, 50vw') }}</div>
+  </div>
+  <nav class="wrap kameny-rada" aria-label="Oblasti">
+    {% for o in O.oblasti %}<a class="kamen kamen-maly" href="#{{ o.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [-3,2,-2,3,-1,2][loop.index0] }}deg">{{ o.nazev }}</a>{% endfor %}
+  </nav>
+</section>
+
+{% for o in O.oblasti %}
+<section class="oblast-blok" id="{{ o.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }}" aria-labelledby="h-{{ o.id }}">
+  <div class="wrap">
+    <div class="oblast-hlava">
+      <span class="oblast-kamen" aria-hidden="true"></span>
+      <h2 id="h-{{ o.id }}">{{ o.nazev }}</h2>
+      <p>{{ o.otazka }}</p>
+    </div>
+    {% for kid in o.kurzy %}{% set k = O.kurzy|selectattr('id','equalto',kid)|first %}
+    <article class="kurz" id="{{ k.id }}">
+      <div class="kurz-hlavni">
+        <p class="kurz-uroven">{{ k.uroven }}</p>
+        <h3>{{ k.nazev }}</h3>
+        <p>{{ k.perex }}</p>
+        <h4>Co se naučíš</h4>
+        <ul class="odrazky">{% for n in k.naucis %}<li>{{ n }}</li>{% endfor %}</ul>
+        <div class="kurz-akce">
+          <a class="tl tl-hl" href="{{ url('kontakt') }}?zajem={{ k.id }}">Chci na kurz</a>
+          {% if k.get("kniha") %}{% set kn = O.knihy|selectattr('id','equalto',k.kniha)|first %}<a class="sipka" href="{{ url('knihy') }}#{{ kn.id }}">Kniha {{ kn.nazev }}</a>{% endif %}
+        </div>
+      </div>
+      <div class="kurz-zisky">
+        <p class="kurz-zisky-h">Zisky studentů</p>
+        {% for z in O.zisky if z.k == k.id %}{{ m.citat(z) }}{% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+    {% if o.koucing %}<p class="oblast-dalsi">K&nbsp;téhle oblasti je i&nbsp;osobní koučing: {% for kid in o.koucing %}<a href="{{ url('koucing') }}#{{ kid }}">{{ m.polozka(kid) }}</a>{% endfor %}</p>{% endif %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="pruh-cta">
+  <div class="wrap pruh-cta-in">
+    <p class="velky">Nevíš, kde začít? Napiš nám, co tě zajímá, a&nbsp;doporučíme ti první kurz.</p>
+    <a class="tl tl-hl" href="{{ url('kontakt') }}">Napiš nám</a>
+  </div>
+</section>
+{% endblock %}

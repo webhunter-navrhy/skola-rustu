@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ titulek or site.nazev }}</title>
+<meta name="description" content="{{ popis or site.popis }}">
+{% if site.navrh or noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<meta name="theme-color" content="{{ site.theme_color }}">
+<link rel="canonical" href="{{ site.url }}{{ cesta or '' }}">
+<link rel="icon" href="{{ base }}favicon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="{{ titulek or site.nazev }}">
+<meta property="og:description" content="{{ popis or site.popis }}">
+<meta property="og:url" content="{{ site.url }}{{ cesta or '' }}">
+{% if og_url %}<meta property="og:image" content="{{ og_url }}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">{% endif %}
+<link rel="preload" href="{{ base }}fonts/familjengrotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% block head %}{% endblock %}
+{% if jsonld %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endif %}
+</head>
+<body class="{% block telo %}{% endblock %}">
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+<header class="hlavicka">
+  <div class="wrap hlavicka-in">
+    <a href="{{ url('') }}" class="logo" aria-label="LifePOWER Praha – Škola růstu, úvod">
+      <img src="{{ base }}{{ site.logo }}" alt="LifePOWER" width="150" height="38">
+      <span class="logo-pod">Škola růstu<br>Praha</span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu"><span></span><span class="sr">Menu</span></button>
+    <nav id="menu" class="menu" aria-label="Hlavní">
+      {% for n in site.nav %}<a href="{{ url(n.href) }}"{% if cesta == n.href ~ '/' %} aria-current="page"{% endif %}>{{ n.text }}</a>{% endfor %}
+      <a class="menu-cta" href="{{ url('kontakt') }}"{% if cesta == 'kontakt/' %} aria-current="page"{% endif %}>Napiš nám</a>
+    </nav>
+  </div>
+</header>
+<main id="obsah">
+{% block obsah %}{% endblock %}
+</main>
+<footer class="paticka">
+  <div class="wrap paticka-in">
+    <div class="paticka-znacka">
+      <img src="{{ base }}logo-svetle.svg" alt="LifePOWER" width="190" height="48" loading="lazy">
+      <p>Škola růstu s.r.o. · IČO {{ site.ico }}<br>Vzdělávací akademie Life Power v Praze</p>
+    </div>
+    <div>
+      <h2 class="paticka-h">Kde nás najdeš</h2>
+      <p>{{ site.kontakt.adresa.ulice }}, {{ site.kontakt.adresa.mesto }}<br>
+      <a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br>
+      <a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a><br>
+      <a href="{{ site.kontakt.instagram }}" rel="noopener">Instagram @lifepower_cz</a></p>
+    </div>
+    <div>
+      <h2 class="paticka-h">Web</h2>
+      <p>{% for n in site.nav %}<a href="{{ url(n.href) }}">{{ n.text }}</a><br>{% endfor %}<a href="{{ url('kontakt') }}">Kontakt</a></p>
+    </div>
+    <div>
+      <h2 class="paticka-h">Ke stažení</h2>
+      <p><a href="{{ base }}soubory/katalog-life-power.pdf">Katalog kurzů a koučingu (PDF)</a><br>
+      <a href="{{ base }}soubory/slovnik-life-power.pdf">Slovník pojmů (PDF)</a></p>
+    </div>
+  </div>
+  <p class="wrap paticka-navrh">Návrh nového webu · ilustrace z knih edice LifePOWER</p>
+</footer>
+<script src="{{ asset('js/main.js') }}" defer></script>
+</body>
+</html>

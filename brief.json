@@ -1,0 +1,170 @@
+{
+ "slug": "skola-rustu",
+ "zdroj_url": "https://www.life-pwr.cz",
+ "firma": "Škola růstu s.r.o. (LifePOWER Praha)",
+ "obor": [
+  "vzdělávání",
+  "koučing a osobní rozvoj"
+ ],
+ "ico": "19379277",
+ "ares": {
+  "ico": "19379277",
+  "nazev": "Škola růstu s.r.o.",
+  "sidlo": "Šluknovská 321/2, Střížkov, 19000 Praha 9",
+  "vznik": "2023-06-12"
+ },
+ "kontakty": {
+  "emaily": [
+   "info@life-pwr.cz",
+   "ivana@ivanalustincova.cz (poptávka)"
+  ],
+  "telefony": [
+   "+420 608 191 315"
+  ],
+  "adresa": "Strašnická 3164/1a, Praha 10",
+  "socialni_site": [
+   "https://www.instagram.com/lifepower_cz/ (z letáku)"
+  ]
+ },
+ "logo": {
+  "soubor": "static/logo.svg",
+  "zdroj": "vektorizováno z Logo-512x512.png (mail UID 11516)",
+  "barvy": [
+   "#003e66",
+   "#299738"
+  ]
+ },
+ "barvy": {
+  "doporucene": [
+   "#003e66",
+   "#299738"
+  ],
+  "oblasti_z_obalek_knih": {
+   "komunikace": "#8cc63f",
+   "studium": "#f6c945",
+   "mysl": "#74cff0",
+   "duch": "#ead3ae"
+  }
+ },
+ "fotky": [
+  {
+   "soubor": "kopec-vlajka.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "lezkyne.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "pratele.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "gol.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "sen-o-studiu.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "student.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "lupa.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "zahradnik-zalevani.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "zahradnici-sazenice.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "kniha-lifepower.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "kniha-komunikace.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "kniha-zaklady-studia.png",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  },
+  {
+   "soubor": "kniha-pribeh-ducha.jpg",
+   "zdroj": "příloha mailu klientky 12. 10. 2026 (ilustrace z knih LifePOWER)"
+  }
+ ],
+ "fakta": [
+  {
+   "typ": "h2",
+   "text": "Vítám Tě v naší Škole růstu, kde se s námi můžeš vydat na cestu ke spokojenému a úspěšnému životu.",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "V naší vzdělávací akademii se Ti budou věnovat certifikovaní koučové a supervizoři.",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "NAPIŠ nebo zavolej",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "+420 608191315",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Strašnická 3164/1a, Praha 10",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "info@life-pwr.cz",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Kurzy KURZ EFEKTIVNÍ KOMUNIKACE ZÁKLADY STUDIA LifePOWER KOUČ Slovník",
+   "zdroj": "https://www.life-pwr.cz/"
+  },
+  {
+   "typ": "katalog",
+   "text": "kurzy, koučing, cesta ke Clear, 8 knih a zisky studentů s iniciálami",
+   "zdroj": "https://www.life-pwr.cz/_files/ugd/a733ae_7e1f3f5568804953a6c0241b3286f101.pdf"
+  },
+  {
+   "typ": "web",
+   "text": "Life Power projekt 2018, Dani Lemberger",
+   "zdroj": "https://www.life-pwr.cz/about-5-2"
+  },
+  {
+   "typ": "web",
+   "text": "certifikovaní koučové a supervizoři; oáza klidu",
+   "zdroj": "https://www.life-pwr.cz/ a /copy-of-home"
+  },
+  {
+   "typ": "poptávka",
+   "text": "knihy, kurzy a procesingy lze kdykoli začít individuálně studovat",
+   "zdroj": "FormSubmit 23. 9. 2026 (UID 5437)"
+  }
+ ],
+ "chybi": [
+  "ohlasy (zisky) pražských studentů – na webu jsou zatím ohlasy z katalogu Life Power",
+  "obálky knih Tvůrce a manažer organizace, Příběh K&Z, S moudrostí k vítězství, Efektivita tvojí mysli",
+  "fotky prostor akademie a lektorů/koučů (pokud chce)",
+  "ceny kurzů a koučingu (pokud je chce na webu)",
+  "termíny kurzů / jak probíhají (online, osobně)"
+ ],
+ "popis_webu": "",
+ "cilova_skupina": "mladí lidé, kteří chtějí rozvíjet komunikaci, studium, sebedůvěru; rodiče; zájemci o koučing",
+ "ton": "tykání (jako na jejím webu: Vítám Tě, Přihlas se), vlídný, motivační"
+}
