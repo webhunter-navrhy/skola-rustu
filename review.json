@@ -1,15 +1,15 @@
 {
-  "znamka": 7,
+  "znamka": 8,
   "slabiny": [
-    "Sekce Zisky studentů (PC buňky 5–6, mobil 4–6) je zeď 9+ stejných karet s barevnými tečkami a drobným písmem kolem 12–13 px. Na mobilu zabere skoro tři obrazovky a působí to jako generický blok, který rozbíjí příběh cesty po kamenech. Oprava: nechat jednu velkou vybranou citaci (24–28 px, Familjen Grotesk, na pozadí v barvě oblasti, např. #8cc63f pro komunikaci) a vedle ní dvě menší. Filtry Vše / Z kurzů / Z koučingu ponechat. Zbytek schovat za odkaz „Všech 26 zisků“ a na mobilu ukázat jen 3 citace nebo vodorovný swipe.",
-    "Sekce Dvě cesty, jedno místo (PC buňka 4, mobil 3–4): černobílé perokresby (student u stolu, zahradníci) se stylem nehodí k barevné ilustraci v hero a k barevným kamenům. Karty jsou navíc řídké a mají jen šedý odstavec. Oprava: perokresby přebarvit do navy #003e66 nebo je dát na tónovaný kruh v barvě oblasti. Pod každou cestu přidat konkrétní položky z briefu jako „kameny“ s odkazem (kurzy: Efektivní komunikace, Základy studia, LifePOWER kouč; koučing: Partnerské vztahy, Clearovací proces) a text zvětšit na 16–17 px.",
-    "Typografie a rytmus na PC: perex v hero, úvod u Kde chceš růst a texty v kartách mají asi 13–14 px ve světle šedé, mají slabý kontrast a na 1440 px jsou ztracené. Pod odkazem „Celá edice (8 knih)“ zůstává prázdná plocha zhruba půl obrazovky (buňka 7). Oprava: zvětšit základní text na 17–18 px v barvě #23384a, perex v hero na 19–20 px, mezeru mezi knihami a sekcí Oáza klidu zmenšit zhruba na polovinu. V mobilním menu zvětšit odkazy Kurzy a Knihy na výšku 44 px (QA hlásí 38 px)."
+    "Rytmus sekcí na PC (1440 px, buňky 5 a 6 koláže): za odkazy „Katalog všech 8 kurzů →“ / „Jak koučing probíhá →“ a „Všech 26 zisků z kurzů i koučingu“ je zhruba 150–250 px prázdné plochy, než začne další nadpis. Stránka se tím rozpadá na oddělené pruhy a odkazy visí osamoceně na konci sekce. Oprava: zmenšit spodní padding těchto sekcí asi na 96 px a odkaz posadit hned pod obsah sekce (pod pilulky kurzů a pod poslední ohlas), ne do samostatného řádku s vlastním odsazením.",
+    "Sekce Knihy edice LifePOWER: obálky mají různou velikost a poměr stran. Na PC je Příběh ducha menší a níž než ostatní, na mobilu 390 px (buňka 7) je naopak vyšší a posunutá nahoru oproti Základům studia, takže mřížka 2×2 působí rozházeně. Oprava: každou obálku dát do stejného rámu (poměr 2:3, object-fit: contain, zarovnat ke spodní hraně „kopce“), všem dát stejný stín a popisky srovnat na jednu účaří.",
+    "Sekce Oáza klidu a odkazy s čísly: věta „působí například v Rize, Haifě a Tel Avivu“ a počty „8 kurzů“ a „26 zisků“ nemají v brief.json přímý zdroj (brief má jen „Life Power projekt 2018, Dani Lemberger“ a 8 knih). Oprava: města a počty ověřit na life-pwr.cz/about-5-2 a v PDF katalogu. Když tam nejsou, větu o městech smazat a odkazy přejmenovat bez čísel („Katalog kurzů →“, „Všechny ohlasy →“)."
   ],
   "silne": [
-    "Koncept vychází přímo z ilustrací klientky: cesta po kamenech na kopec s vlajkou a výběr oblasti života („Kde chceš růst?“ → kurz, koučing a kniha). Motiv se dál vrací v knihách na zeleném kopci a v lezkyni u sekce Oáza klidu.",
-    "Brand sedí: logo LifePOWER vlevo v hlavičce, navy #003e66 a zelená #299738, barvy oblastí převzaté z obálek knih. Tykání odpovídá tónu jejího webu.",
-    "Obsah je pravdivý: ohlasy jsou z katalogu, mají iniciály a poznámku o zdroji, edice má 8 knih podle briefu a nic není vymyšlené.",
-    "QA nenašla chyby, nic nepřetéká na 6 šířkách, stránka přenese 0,5 MB a kontakt je jasný (e-mail, telefon, adresa a formulář v tmavém bloku)."
+    "Jasný koncept z oboru i z klientčiných ilustrací: kameny jako oblasti života, cesta „Tady začínáš“ k vlajce „tvůj cíl“. Nápad se vrací v hero, v interaktivní mapě, v pilulkách kurzů i v knihách na kopci.",
+    "Brand sedí: logo LifePOWER vlevo v hlavičce, navy #003e66 a zelená #299738 a k tomu barvy oblastí převzaté z obálek knih. Všechny obrázky jsou vlastní ilustrace z knih, žádné cizí stocky.",
+    "Ohlasy jsou poctivě označené jako ohlasy z katalogu Life Power (iniciály + kurz). Tykání a vlídný tón odpovídají původnímu webu.",
+    "Mobil vypadá navržený pro telefon: cesta z kamenů jde cikcak, karty a formulář jsou čitelné, nic nepřetéká (QA bez chyb na všech 6 šířkách) a stránka má jen asi 0,5 MB."
   ],
-  "verdikt": "opravit: originální koncept v brandu klientky s pravdivým obsahem, který ale sráží šablonovitá zeď ohlasů, nesourodé perokresby u Dvou cest a malý, bledý text. Po opravě těchto tří míst má web na 8."
+  "verdikt": "Originální a značkově věrný redesign s nápadem, který drží celou stránku. Po zhutnění mezer mezi sekcemi, sjednocení obálek knih a ověření měst a počtů je to připravené k odeslání."
 }

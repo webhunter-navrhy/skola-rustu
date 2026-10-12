@@ -155,6 +155,11 @@
    "typ": "poptávka",
    "text": "knihy, kurzy a procesingy lze kdykoli začít individuálně studovat",
    "zdroj": "FormSubmit 23. 9. 2026 (UID 5437)"
+  },
+  {
+   "typ": "katalog",
+   "text": "centra Life Power: Riga, Praha, Haifa, Tel Aviv, Moskva, Kazaň (poslední strana katalogu)",
+   "zdroj": "katalog PDF life-pwr.cz, str. 16"
   }
  ],
  "chybi": [

@@ -2,9 +2,7 @@
   "url": "https://webhunter-navrhy.github.io/skola-rustu/",
   "ok": true,
   "chyby": [],
-  "varovani": [
-    "Dotykové cíle <40 px na mobilu: 2× (např. a \"Kurzy\" 38×44; a \"Knihy\" 38×44)"
-  ],
+  "varovani": [],
   "metriky": {
     "sirky": {
       "1440": {
@@ -43,7 +41,7 @@
       "kB": 61,
       "url": "https://webhunter-navrhy.github.io/skola-rustu/img/kniha-zaklady-studia-640.webp"
     },
-    "snimku_mobil": 10,
+    "snimku_mobil": 11,
     "seo": {
       "title": "Škola růstu – LifePOWER Praha | kurzy, koučing a knihy pro osobní růst",
       "description": "Škola růstu – LifePOWER Praha: kurzy komunikace, studia a sebepoznání, osobní koučing a knihy edice ",
@@ -58,7 +56,7 @@
       "canonical": true,
       "viewport": true
     },
-    "maly_dotykovy_cil": 2,
+    "maly_dotykovy_cil": 0,
     "font_nadpis": "Familjen Grotesk",
     "font_text": "Figtree"
   }

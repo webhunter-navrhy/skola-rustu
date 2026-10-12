@@ -338,3 +338,7 @@ body{font-size:clamp(1.0625rem,1.1vw,1.15rem);color:#13293b}
 .zisk.zisk-velky figcaption{font-size:1rem}
 .cesta-obr{aspect-ratio:2.1}
 .cesta-obr img{max-height:11rem}
+/* review kolo 2 */
+.dve-cesty,.zisky-sekce:not(.zisky-stranka){padding-bottom:clamp(3.5rem,6vw,6rem)}
+.policka img{width:auto;max-width:100%;height:clamp(10rem,19vw,15.5rem);object-fit:contain}
+.policka .obalka-plocha{height:clamp(9.2rem,17.5vw,14.2rem);max-width:none;width:auto;margin-bottom:.6rem}
