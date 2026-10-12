@@ -69,15 +69,17 @@
     <h2 id="dve-h" class="sekce-h">Dvě cesty, jedno místo</h2>
     <div class="dve-mriz">
       <article class="cesta-blok">
-        <div class="cesta-obr">{{ img('student.png', 'Ilustrace: chlapec se učí u psacího stolu', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
+        <div class="cesta-obr cesta-obr-zluta">{{ img('student.png', 'Ilustrace: chlapec se učí u psacího stolu', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
         <h3>Kurzy na zvýšení schopností</h3>
         <p>Učíš se a&nbsp;hned procvičuješ pod vedením odborníka. Kurzy jdou tvým vlastním tempem a&nbsp;můžeš začít kdykoli. Nejdřív pochopíš principy, pak si je vyzkoušíš v&nbsp;praxi.</p>
-        <a class="sipka" href="{{ url('kurzy') }}">Katalog kurzů</a>
+        <ul class="mini-kameny" role="list">{% for kid in ['efektivni-komunikace','brilantni-student','tajemstvi-podvedomi','lp-kouc'] %}{% set k = O.kurzy|selectattr('id','equalto',kid)|first %}{% set o = O.oblasti|selectattr('id','equalto',k.oblast)|first %}<li><a class="kamen kamen-maly" href="{{ url('kurzy') }}#{{ k.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [-2,2,-1,1][loop.index0] }}deg">{{ k.nazev }}</a></li>{% endfor %}</ul>
+        <a class="sipka" href="{{ url('kurzy') }}">Katalog všech {{ O.kurzy|length }} kurzů</a>
       </article>
       <article class="cesta-blok">
-        <div class="cesta-obr">{{ img('zahradnici-sazenice.png', 'Ilustrace: zahradníci sázejí a zalévají mladé stromky', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
+        <div class="cesta-obr cesta-obr-zelena">{{ img('zahradnici-sazenice.png', 'Ilustrace: zahradníci sázejí a zalévají mladé stromky', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
         <h3>Osobní koučing a&nbsp;procesingy</h3>
         <p>Program nastavený přímo pro tebe, vedený kvalifikovaným koučem. Pomůže odstranit vnitřní bariéry a&nbsp;vrátí ti sílu, sebedůvěru a&nbsp;vyrovnanost.</p>
+        <ul class="mini-kameny" role="list">{% for k in O.koucing %}{% set o = O.oblasti|selectattr('id','equalto',k.oblast)|first %}<li><a class="kamen kamen-maly" href="{{ url('koucing') }}#{{ k.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [2,-2,1,-1][loop.index0] }}deg">{{ k.nazev }}</a></li>{% endfor %}</ul>
         <a class="sipka" href="{{ url('koucing') }}">Jak koučing probíhá</a>
       </article>
     </div>
@@ -86,19 +88,18 @@
 
 <section class="zisky-sekce" aria-labelledby="zisky-h">
   <div class="wrap">
-    <div class="sekce-hlava sekce-hlava-r">
+    <div class="sekce-hlava">
       <h2 id="zisky-h">Zisky studentů</h2>
-      <p>Co lidem přinesly kurzy a&nbsp;procesingy, jejich vlastními slovy.</p>
-      <div class="prepinac" role="group" aria-label="Filtr zisků">
-        <button aria-pressed="true" data-filtr="vse">Vše</button>
-        <button aria-pressed="false" data-filtr="kurz">Z kurzů</button>
-        <button aria-pressed="false" data-filtr="koucing">Z koučingu</button>
+      <p>Co lidem přinesly kurzy a&nbsp;procesingy, jejich vlastními slovy. Ziskem říkáme to, co si člověk odnese do života.</p>
+    </div>
+    <div class="zisky-vyber">
+      {% set hl = O.zisky|selectattr('kdo','equalto','N. M.')|first %}
+      {{ m.citat(hl, velky=True) }}
+      <div class="zisky-vedle">
+        {% for z in O.zisky if z.kdo in ['S. S. a A. S.','A. K.'] %}{{ m.citat(z) }}{% endfor %}
       </div>
     </div>
-    <div class="zisky-mriz" data-zisky>
-      {% for z in O.zisky if z.kdo in ['B. H.','A. K.','N. M.','G. H.','S. S. a A. S.','A. S.','D. V.','N., 12 let','A. E.'] %}{{ m.citat(z) }}{% endfor %}
-    </div>
-    <p class="zdroj">Ohlasy absolventů center Life Power z katalogu kurzů. <a class="sipka" href="{{ url('zisky') }}">Všech {{ O.zisky|length }} zisků</a></p>
+    <p class="zdroj"><a class="tl tl-obrys" href="{{ url('zisky') }}">Všech {{ O.zisky|length }} zisků z&nbsp;kurzů i&nbsp;koučingu</a><span>Ohlasy absolventů center Life Power z&nbsp;katalogu kurzů.</span></p>
   </div>
 </section>
 

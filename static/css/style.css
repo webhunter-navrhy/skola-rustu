@@ -306,4 +306,35 @@ p{margin:0 0 1em;text-wrap:pretty;max-width:62ch}
 .logo{min-height:44px}
 .panel-cesty a,.oblast-dalsi a,.kniha-kurz a{display:inline-block;padding:.6rem 0;margin:-.6rem 0}
 .kontakt-seznam a,.paticka a{min-height:44px;display:inline-flex;align-items:center}
-@media (max-width:48rem){.uvod .zisky-mriz .zisk:nth-child(n+5){display:none}}
+
+
+/* review kolo 1 */
+:root{--ink2:#2f4456}
+body{font-size:clamp(1.0625rem,1.1vw,1.15rem);color:#13293b}
+.hero-perex{font-size:clamp(1.15rem,1.5vw,1.35rem);color:#23384a}
+.sekce-hlava p{font-size:clamp(1.1rem,1.3vw,1.25rem);color:#23384a}
+.cesta-blok p,.panel-cesty dd{font-size:1.08rem}
+.cesta-blok h3{font-size:clamp(1.5rem,2.2vw,1.9rem)}
+.cesta-obr{height:auto;aspect-ratio:1.6;align-items:center;justify-content:center;border-radius:1.5rem;padding:1.5rem}
+.cesta-obr img{max-height:13rem}
+.cesta-obr-zluta{background:#fbe7a6}
+.cesta-obr-zelena{background:#dcefc9}
+.mini-kameny{list-style:none;padding:0;margin:.5rem 0 1.8rem;display:flex;flex-wrap:wrap;gap:.8rem .6rem}
+.zisky-vyber{display:grid;grid-template-columns:1.25fr 1fr;gap:1.5rem;align-items:stretch}
+.zisky-vedle{display:grid;gap:1.5rem}
+.zisky-vedle .zisk{margin:0}
+.zisk-velky{margin:0;background:var(--o);color:var(--ot);border:0;padding:clamp(2rem,4vw,3.5rem);display:flex;flex-direction:column;justify-content:space-between}
+.zisk-velky::before{display:none}
+.zisk-velky p{font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.25;letter-spacing:-.02em}
+.zisk-velky .zisk-co{color:inherit;opacity:.85}
+.zisk p{font-size:1.18rem}
+.zisk figcaption{font-size:.95rem}
+.zdroj{margin-top:2.5rem;font-size:.98rem}
+.knihy-sekce{padding-bottom:clamp(3rem,6vw,5rem)}
+.policka{margin-bottom:1.5rem}
+.paticka-in p a{min-width:44px}
+@media (max-width:56rem){.zisky-vyber{grid-template-columns:1fr}}
+.zisk.zisk-velky p{font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.25;letter-spacing:-.02em}
+.zisk.zisk-velky figcaption{font-size:1rem}
+.cesta-obr{aspect-ratio:2.1}
+.cesta-obr img{max-height:11rem}

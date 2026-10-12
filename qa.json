@@ -1,9 +1,8 @@
 {
-  "url": "http://localhost:8771/skola-rustu/",
+  "url": "https://webhunter-navrhy.github.io/skola-rustu/",
   "ok": true,
   "chyby": [],
   "varovani": [
-    "Web má noindex (u ostrého webu pravděpodobně chyba)",
     "Dotykové cíle <40 px na mobilu: 2× (např. a \"Kurzy\" 38×44; a \"Knihy\" 38×44)"
   ],
   "metriky": {
@@ -33,18 +32,18 @@
         "pocet_pretekajicich": 0
       }
     },
-    "preneseno_PC_MB": 0.57,
+    "preneseno_PC_MB": 0.5,
     "nejvetsi_obrazek_PC": {
       "kB": 61,
-      "url": "http://localhost:8771/skola-rustu/img/kniha-zaklady-studia-640.webp"
+      "url": "https://webhunter-navrhy.github.io/skola-rustu/img/kniha-zaklady-studia-640.webp"
     },
     "snimku_PC": 8,
-    "preneseno_mobil_MB": 0.55,
+    "preneseno_mobil_MB": 0.48,
     "nejvetsi_obrazek_mobil": {
       "kB": 61,
-      "url": "http://localhost:8771/skola-rustu/img/kniha-zaklady-studia-640.webp"
+      "url": "https://webhunter-navrhy.github.io/skola-rustu/img/kniha-zaklady-studia-640.webp"
     },
-    "snimku_mobil": 12,
+    "snimku_mobil": 10,
     "seo": {
       "title": "Škola růstu – LifePOWER Praha | kurzy, koučing a knihy pro osobní růst",
       "description": "Škola růstu – LifePOWER Praha: kurzy komunikace, studia a sebepoznání, osobní koučing a knihy edice ",

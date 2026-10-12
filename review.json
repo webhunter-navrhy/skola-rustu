@@ -1,0 +1,15 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Sekce Zisky studentů (PC buňky 5–6, mobil 4–6) je zeď 9+ stejných karet s barevnými tečkami a drobným písmem kolem 12–13 px. Na mobilu zabere skoro tři obrazovky a působí to jako generický blok, který rozbíjí příběh cesty po kamenech. Oprava: nechat jednu velkou vybranou citaci (24–28 px, Familjen Grotesk, na pozadí v barvě oblasti, např. #8cc63f pro komunikaci) a vedle ní dvě menší. Filtry Vše / Z kurzů / Z koučingu ponechat. Zbytek schovat za odkaz „Všech 26 zisků“ a na mobilu ukázat jen 3 citace nebo vodorovný swipe.",
+    "Sekce Dvě cesty, jedno místo (PC buňka 4, mobil 3–4): černobílé perokresby (student u stolu, zahradníci) se stylem nehodí k barevné ilustraci v hero a k barevným kamenům. Karty jsou navíc řídké a mají jen šedý odstavec. Oprava: perokresby přebarvit do navy #003e66 nebo je dát na tónovaný kruh v barvě oblasti. Pod každou cestu přidat konkrétní položky z briefu jako „kameny“ s odkazem (kurzy: Efektivní komunikace, Základy studia, LifePOWER kouč; koučing: Partnerské vztahy, Clearovací proces) a text zvětšit na 16–17 px.",
+    "Typografie a rytmus na PC: perex v hero, úvod u Kde chceš růst a texty v kartách mají asi 13–14 px ve světle šedé, mají slabý kontrast a na 1440 px jsou ztracené. Pod odkazem „Celá edice (8 knih)“ zůstává prázdná plocha zhruba půl obrazovky (buňka 7). Oprava: zvětšit základní text na 17–18 px v barvě #23384a, perex v hero na 19–20 px, mezeru mezi knihami a sekcí Oáza klidu zmenšit zhruba na polovinu. V mobilním menu zvětšit odkazy Kurzy a Knihy na výšku 44 px (QA hlásí 38 px)."
+  ],
+  "silne": [
+    "Koncept vychází přímo z ilustrací klientky: cesta po kamenech na kopec s vlajkou a výběr oblasti života („Kde chceš růst?“ → kurz, koučing a kniha). Motiv se dál vrací v knihách na zeleném kopci a v lezkyni u sekce Oáza klidu.",
+    "Brand sedí: logo LifePOWER vlevo v hlavičce, navy #003e66 a zelená #299738, barvy oblastí převzaté z obálek knih. Tykání odpovídá tónu jejího webu.",
+    "Obsah je pravdivý: ohlasy jsou z katalogu, mají iniciály a poznámku o zdroji, edice má 8 knih podle briefu a nic není vymyšlené.",
+    "QA nenašla chyby, nic nepřetéká na 6 šířkách, stránka přenese 0,5 MB a kontakt je jasný (e-mail, telefon, adresa a formulář v tmavém bloku)."
+  ],
+  "verdikt": "opravit: originální koncept v brandu klientky s pravdivým obsahem, který ale sráží šablonovitá zeď ohlasů, nesourodé perokresby u Dvou cest a malý, bledý text. Po opravě těchto tří míst má web na 8."
+}
