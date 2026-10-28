@@ -16,7 +16,7 @@
 
 {% macro obalka(kn, maly=False) -%}
 {%- if kn.obalka -%}
-{{ img(kn.obalka, 'Obálka knihy ' ~ kn.nazev, sizes='(min-width: 60rem) 16rem, 40vw', cls='obalka-img' ~ (' obalka-plocha' if kn.obalka.endswith('.jpg') else '')) }}
+{{ img(kn.obalka, 'Obálka knihy ' ~ kn.nazev, sizes='(min-width: 60rem) 16rem, 40vw', cls='obalka-img' ~ (' obalka-mockup' if kn.id in ['tvurce','kz','efektivita'] else (' obalka-plocha' if kn.obalka.endswith('.jpg') else ''))) }}
 {%- else -%}
 <div class="obalka-typo" style="--o: {{ kn.barva }}" role="img" aria-label="Kniha {{ kn.nazev }} (obálku doplníme)">
   <span class="obalka-lp">LifePOWER</span>

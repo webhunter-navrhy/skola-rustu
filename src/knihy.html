@@ -9,7 +9,7 @@
   <div class="wrap">
     <h1>Knihy edice LifePOWER</h1>
     <p class="hero-perex">Life Power je aplikovaná filozofie, která umožňuje každému rozvíjet své schopnosti a&nbsp;zlepšovat všechny oblasti života. Knihy můžeš studovat sám a&nbsp;procvičovat doma, nebo s&nbsp;nimi projít kurz v&nbsp;naší akademii.</p>
-    <p class="hero-perex">Obálky dalších knih zatím nejsou přeložené do češtiny, překlad se chystá. Doplníme je hned, jak budou hotové.</p>
+    <p class="hero-perex">Obálky některých knih jsou zatím v&nbsp;angličtině, české verze se připravují.</p>
   </div>
 </section>
 <section class="knihy-seznam">
@@ -23,7 +23,7 @@
         <p>{{ kn.text }}</p>
         {% set ks = O.kurzy|selectattr('kniha','defined')|selectattr('kniha','equalto',kn.id)|list %}
         {% if ks %}<p class="kniha-kurz">Kurz k&nbsp;této knize: {% for k in ks %}<a href="{{ url('kurzy') }}#{{ k.id }}">{{ k.nazev }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
-        <a class="sipka" href="{{ url('kontakt') }}?zajem=knihy">Chci knihu</a>
+        <p class="kniha-pod">Rádi pro vás připravíme kalkulaci. Ozvěte se nám na <a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a>.</p>
       </div>
     </article>
     {% endfor %}

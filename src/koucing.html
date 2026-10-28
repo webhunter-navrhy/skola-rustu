@@ -24,7 +24,7 @@
       <p>{{ k.perex }}</p>
       <ul class="odrazky">{% for n in k.ziskas %}<li>{{ n }}</li>{% endfor %}</ul>
       {% for z in O.zisky if z.k == k.id %}{% if loop.index <= 1 %}{{ m.citat(z) }}{% endif %}{% endfor %}
-      <a class="sipka" href="{{ url('kontakt') }}?zajem={{ k.id }}">Zeptat se na {{ k.nazev|lower if k.id != 'stav-clear' else 'cestu ke stavu Klír' }}</a>
+      <a class="sipka" href="{{ url('kontakt') }}?zajem={{ k.id }}">Máte zájem? Napište nám přes formulář</a>
     </article>
     {% endfor %}
   </div>

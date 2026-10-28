@@ -346,7 +346,7 @@
    "nazev": "Tvůrce a manažer organizace",
    "podtitul": "Konečným produktem organizace je svoboda",
    "autor": "",
-   "obalka": "",
+   "obalka": "kniha-tvurce.jpg",
    "barva": "#9db8dc",
    "text": "Znalosti, které potřebuješ, abys mohl vytvořit organizaci, kde všichni prosperují a každý dosahuje svých cílů při zachování osobní svobody."
   },
@@ -355,7 +355,7 @@
    "nazev": "Příběh K&Z",
    "podtitul": "Teorie a praxe kontroly a záměru",
    "autor": "",
-   "obalka": "",
+   "obalka": "kniha-kz.jpg",
    "barva": "#efb98a",
    "text": "Formulování cílů a jejich bezproblémové dosahování. Schopnosti, které jsou v příručce procvičovány k dokonalosti."
   },
@@ -364,7 +364,7 @@
    "nazev": "S moudrostí k vítězství",
    "podtitul": "Život s jistotou a prosperitou",
    "autor": "Carmela Weizman",
-   "obalka": "",
+   "obalka": "kniha-moudrost.jpg",
    "barva": "#f3a7a0",
    "text": "Autorka má přes 20 let zkušeností jako osobní koučka a pracovala se stovkami dospělých i teenagerů. Jednoduché, ale účinné nástroje pro stabilní život."
   },
@@ -373,7 +373,7 @@
    "nazev": "Efektivita tvojí mysli",
    "podtitul": "Anatomie mysli a zvýšení jejího výkonu",
    "autor": "",
-   "obalka": "",
+   "obalka": "kniha-efektivita.jpg",
    "barva": "#b9e3f3",
    "text": "Shrnutí klíčových principů z knihy Life Power: tři části osobnosti, funkce lidské mysli a snadno použitelné techniky."
   }

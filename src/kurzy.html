@@ -35,7 +35,7 @@
         <h4>Co se naučíš</h4>
         <ul class="odrazky">{% for n in k.naucis %}<li>{{ n }}</li>{% endfor %}</ul>
         <div class="kurz-akce">
-          <a class="tl tl-hl" href="{{ url('kontakt') }}?zajem={{ k.id }}">Chci na kurz</a>
+          <a class="tl tl-hl" href="{{ url('kontakt') }}?zajem={{ k.id }}">Máte zájem o kurz? Napište nám přes formulář</a>
           {% if k.get("kniha") %}{% set kn = O.knihy|selectattr('id','equalto',k.kniha)|first %}<a class="sipka" href="{{ url('knihy') }}#{{ kn.id }}">Kniha {{ kn.nazev }}</a>{% endif %}
         </div>
       </div>
