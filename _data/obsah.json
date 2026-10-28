@@ -5,7 +5,7 @@
    "nazev": "Komunikace a vztahy",
    "barva": "#8cc63f",
    "text": "#1f3d0c",
-   "otazka": "Chceš se s kýmkoli na čemkoli domluvit a mít klid v rozhovoru?",
+   "otazka": "Chceš se s kýmkoli na čemkoli domluvit a být u rozhovoru klidný?",
    "kurzy": [
     "efektivni-komunikace"
    ],
@@ -133,7 +133,7 @@
    "uroven": "Kurz na zlepšení života",
    "kniha": "zaklady-studia",
    "stara_stranka": "Základy studia",
-   "perex": "Měl(a) jsi někdy potíže se soustředěním při studiu? Naučil(a) ses něco, ale pak to zapomněl(a)? To, co z tebe udělá zářící hvězdu v nějakém oboru, není talent, ale znalost zákonitostí studia.",
+   "perex": "Měl jsi někdy potíže se soustředěním při studiu? Naučil ses něco, ale pak to zapomněl? To, co z tebe udělá zářící hvězdu v nějakém oboru, není talent, ale znalost zákonitostí studia.",
    "naucis": [
     "Jak překonat rušivé vlivy při studiu?",
     "Jak rozpoznat překážky ve studiu a okamžitě je odstranit?",
@@ -149,7 +149,7 @@
    "kniha": "komunikace",
    "perex": "Chceš být sebevědomý(á), otevřený(á) a schopný(á) mluvit s kýmkoli o čemkoli? Po důkladném absolvování osmi komunikačních cvičení dokážeš prodat své nápady a přimět lidi, aby s tebou spolupracovali.",
    "naucis": [
-    "Zlepšíš své soustředění, abys komunikací dosáhl(a) toho, co chceš.",
+    "Zlepšíš své soustředění, abys komunikací dosáhl toho, co chceš.",
     "Rozvineš mentální „odolnost“ vůči tomu, co říkají nebo dělají ostatní.",
     "Naučíš se vést jakoukoli konverzaci nebo společenskou situaci."
    ]
@@ -176,7 +176,7 @@
    "naucis": [
     "Co je jediným důvodem výkyvů v emocích, sebevědomí a energii?",
     "Objevíš hlavní zdroj nestability a způsob, jak ho překonat.",
-    "Strategie pro zvládání „horské dráhy“, abys mohl(a) stabilně prosperovat."
+    "Strategie pro zvládání „horské dráhy“, abys mohl stabilně prosperovat."
    ]
   },
   {
@@ -203,7 +203,7 @@
    "naucis": [
     "Účinné nástroje, které zlepší i tvůj vlastní život.",
     "Odborné znalosti pro kvalifikovaného LP kouče.",
-    "Sám (sama) absolvuješ clearovací procesy.",
+    "Sám absolvuješ klírovací procesy.",
     "Můžeš spolupracovat s ostatními studenty a připojit se ke globální síti Life Power."
    ]
   },
@@ -225,9 +225,9 @@
  "koucing": [
   {
    "id": "clearovaci-proces",
-   "nazev": "Clearovací proces",
+   "nazev": "Klírovací proces",
    "oblast": "mysl",
-   "perex": "Strachy, zábrany, negativní emoce, pochybnosti a nedostatek sebevědomí při setkání s ostatními jsou projevy „vnitřního nepřítele“. Tvůj Life Power kouč spolu se specialistou na clearovací proces navrhne program, který odstraní vnitřní překážky, které tě brzdí.",
+   "perex": "Strachy, zábrany a nežádoucí emoce, pochybnosti a nedostatek sebevědomí při setkání s jinými lidmi nebo když stojíš před nějakou výzvou, jsou projevy „vnitřního nepřítele“. Tvůj LifePOWER kouč spolu se specialistou na klírovací proces sestaví program, který ti pomůže odstranit překážky, které tě brzdí.",
    "ziskas": [
     "Optimistický pohled na život, víc energie a vitality.",
     "Vysoké sebevědomí, lepší komunikaci a vztahy.",
@@ -258,9 +258,9 @@
   },
   {
    "id": "stav-clear",
-   "nazev": "Cesta ke stavu Clear",
+   "nazev": "Cesta ke stavu Klír",
    "oblast": "mysl",
-   "perex": "Slovo „Clear“ označuje jedinečný stav vědění, bdělosti a svobody v jednání a emocích. Odborníci Life Power ti navrhnou jedinečný program z řady clearovacích procesů v rámci programu Cesta k duchovní svobodě.",
+   "perex": "Slovo „Klír“ označuje jedinečný stav vědění, bdělosti a svobody v jednání a emocích. Odborníci Life Power ti navrhnou jedinečný program z řady klírovacích procesů v rámci programu Cesta k duchovní svobodě.",
    "ziskas": [
     "Jasná mysl bez nežádoucích reakcí.",
     "Odolnost v náročných situacích.",
@@ -287,7 +287,7 @@
    "text": "Osvobozuje od minulých škodlivých činů a dává nástroje pro vyšší sebevědomí."
   },
   {
-   "nazev": "Základní clearovací proces",
+   "nazev": "Základní klírovací proces",
    "text": "Zvládání podvědomí, osvobození od traumat, zlepšení osobních schopností."
   },
   {
@@ -295,11 +295,11 @@
    "text": "Vyšší schopnosti v komunikaci, řešení problémů a osvobození od minulých rozrušení."
   },
   {
-   "nazev": "Pokročilý clearovací proces",
+   "nazev": "Pokročilý klírovací proces",
    "text": "Proces, který odstraní reaktivní mysl a účinky minulých traumat."
   },
   {
-   "nazev": "Clear",
+   "nazev": "Klír",
    "text": "Člověk, který už nemá svoji reaktivní mysl.",
    "cil": true
   }
@@ -348,7 +348,7 @@
    "autor": "",
    "obalka": "",
    "barva": "#9db8dc",
-   "text": "Znalosti, které potřebuješ, abys mohl(a) vytvořit organizaci, kde všichni prosperují a každý dosahuje svých cílů při zachování osobní svobody."
+   "text": "Znalosti, které potřebuješ, abys mohl vytvořit organizaci, kde všichni prosperují a každý dosahuje svých cílů při zachování osobní svobody."
   },
   {
    "id": "kz",
@@ -496,7 +496,7 @@
   {
    "kdo": "A. M.",
    "k": "clearovaci-proces",
-   "text": "Dnes jsem absolvoval clearovací proces a byla to velká zábava! Mnoho starostí jsem nechal za sebou a vím, že mě čeká nová cesta. Velké díky mému koučovi.",
+   "text": "Dnes jsem absolvoval klírovací proces a byla to velká zábava! Mnoho starostí jsem nechal za sebou a vím, že mě čeká nová cesta. Velké díky mému koučovi.",
    "typ": "koucing"
   },
   {
@@ -526,7 +526,7 @@
   {
    "kdo": "R. S.",
    "k": "stav-clear",
-   "text": "Dnes jsem konečně dosáhl stavu Clear! Je to úžasný stav klidu a sebevědomí, který jsem nikdy předtím nezažil. Vždycky se mi to zdálo tak vzdálené, ale bylo to na dosah ruky.",
+   "text": "Dnes jsem konečně dosáhl stavu Klír! Je to úžasný stav klidu a sebevědomí, který jsem nikdy předtím nezažil. Vždycky se mi to zdálo tak vzdálené, ale bylo to na dosah ruky.",
    "typ": "koucing"
   },
   {

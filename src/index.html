@@ -71,14 +71,14 @@
       <article class="cesta-blok">
         <div class="cesta-obr cesta-obr-zluta">{{ img('student.png', 'Ilustrace: chlapec se učí u psacího stolu', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
         <h3>Kurzy na zvýšení schopností</h3>
-        <p>Učíš se a&nbsp;hned procvičuješ pod vedením odborníka. Kurzy jdou tvým vlastním tempem a&nbsp;můžeš začít kdykoli. Nejdřív pochopíš principy, pak si je vyzkoušíš v&nbsp;praxi.</p>
+        <p>Při studiu kurzů získáš důležité informace, díky kterým pochopíš, jak daná oblast, o které studuješ, funguje. Důležitou součástí každého kurzu je procvičování dovedností, které chceš ovládnout. Díky pochopení principů a praktickým cvičením najdeš cestu, jak své nové schopnosti zabudovat do života. To vše svým vlastním tempem. Teorie ruku v ruce s praxí.</p>
         <ul class="mini-kameny" role="list">{% for kid in ['efektivni-komunikace','brilantni-student','tajemstvi-podvedomi','lp-kouc'] %}{% set k = O.kurzy|selectattr('id','equalto',kid)|first %}{% set o = O.oblasti|selectattr('id','equalto',k.oblast)|first %}<li><a class="kamen kamen-maly" href="{{ url('kurzy') }}#{{ k.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [-2,2,-1,1][loop.index0] }}deg">{{ k.nazev }}</a></li>{% endfor %}</ul>
         <a class="sipka" href="{{ url('kurzy') }}">Katalog všech {{ O.kurzy|length }} kurzů</a>
       </article>
       <article class="cesta-blok">
         <div class="cesta-obr cesta-obr-zelena">{{ img('zahradnici-sazenice.png', 'Ilustrace: zahradníci sázejí a zalévají mladé stromky', sizes='(min-width: 64rem) 22rem, 70vw') }}</div>
         <h3>Osobní koučing a&nbsp;procesingy</h3>
-        <p>Program nastavený přímo pro tebe, vedený kvalifikovaným koučem. Pomůže odstranit vnitřní bariéry a&nbsp;vrátí ti sílu, sebedůvěru a&nbsp;vyrovnanost.</p>
+        <p>V rámci osobního koučingu LifePOWER dostaneš procesy, vedené kvalifikovaným koučem, sestavené na míru přímo tobě. Koučing a procesingy jsou zaměřeny na odstraňování vnitřních bariér a jejich výsledkem je znovu získání síly, sebedůvěry a vyrovnanosti.</p>
         <ul class="mini-kameny" role="list">{% for k in O.koucing %}{% set o = O.oblasti|selectattr('id','equalto',k.oblast)|first %}<li><a class="kamen kamen-maly" href="{{ url('koucing') }}#{{ k.id }}" style="--o:{{ o.barva }};--ot:{{ o.text }};--r:{{ [2,-2,1,-1][loop.index0] }}deg">{{ k.nazev }}</a></li>{% endfor %}</ul>
         <a class="sipka" href="{{ url('koucing') }}">Jak koučing probíhá</a>
       </article>
@@ -89,8 +89,8 @@
 <section class="zisky-sekce" aria-labelledby="zisky-h">
   <div class="wrap">
     <div class="sekce-hlava">
-      <h2 id="zisky-h">Zisky studentů</h2>
-      <p>Co lidem přinesly kurzy a&nbsp;procesingy, jejich vlastními slovy. Ziskem říkáme to, co si člověk odnese do života.</p>
+      <h2 id="zisky-h">Příběhy studentů</h2>
+      <p>Představujeme příběhy studentů a absolventů procesingů, tedy to, co si odnesli do života a jak dokázali svůj život změnit.</p>
     </div>
     <div class="zisky-vyber">
       {% set hl = O.zisky|selectattr('kdo','equalto','N. M.')|first %}
@@ -99,7 +99,7 @@
         {% for z in O.zisky if z.kdo in ['S. S. a A. S.','A. K.'] %}{{ m.citat(z) }}{% endfor %}
       </div>
     </div>
-    <p class="zdroj"><a class="tl tl-obrys" href="{{ url('zisky') }}">Všech {{ O.zisky|length }} zisků z&nbsp;kurzů i&nbsp;koučingu</a><span>Ohlasy absolventů center Life Power z&nbsp;katalogu kurzů.</span></p>
+    <p class="zdroj"><a class="tl tl-obrys" href="{{ url('pribehy') }}">Všech {{ O.zisky|length }} příběhů z&nbsp;kurzů i&nbsp;koučingu</a><span>Ohlasy absolventů center Life Power z&nbsp;katalogu kurzů.</span></p>
   </div>
 </section>
 

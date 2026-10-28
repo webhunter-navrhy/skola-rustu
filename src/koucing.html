@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 {% import "_makra.html" as m with context %}
 {% set titulek = 'Osobní koučing a procesingy LifePOWER v Praze | Škola růstu' %}
-{% set popis = 'Osobní koučing Life Power v Praze: clearovací proces, partnerské vztahy, rodičovství a výchova dětí, cesta ke stavu Clear. Program na míru s kvalifikovaným koučem.' %}
+{% set popis = 'Osobní koučing Life Power v Praze: klírovací proces, partnerské vztahy, rodičovství a výchova dětí, cesta ke stavu Klír. Program na míru s kvalifikovaným koučem.' %}
 {% set cesta = 'koucing/' %}
 {% block obsah %}
 {% set O = data.obsah %}
@@ -9,7 +9,7 @@
   <div class="wrap stranka-hlava-in">
     <div>
       <h1>Osobní koučing a&nbsp;procesingy</h1>
-      <p class="hero-perex">V&nbsp;rámci osobního koučinku LifePower dostaneš procesy nastavené přímo pro tebe, vedené kvalifikovaným koučem. Pomohou odstranit vnitřní bariéry a&nbsp;výsledkem je znovuzískání síly, sebedůvěry a&nbsp;vyrovnanosti.</p>
+      <p class="hero-perex">V rámci osobního koučingu LifePOWER dostaneš procesy, vedené kvalifikovaným koučem, sestavené na míru přímo tobě. Koučing a procesingy jsou zaměřeny na odstraňování vnitřních bariér a jejich výsledkem je znovu získání síly, sebedůvěry a vyrovnanosti.</p>
       <p>Každý člověk je nezaměnitelná osobnost. Služby ti poskytnou profesionálové, kteří prošli odborným tréninkem.</p>
     </div>
     <div class="stranka-obr">{{ img('zahradnik-zalevani.png', 'Ilustrace: zahradník zalévá mladé stromky', sizes='(min-width: 64rem) 20rem, 50vw') }}</div>
@@ -24,7 +24,7 @@
       <p>{{ k.perex }}</p>
       <ul class="odrazky">{% for n in k.ziskas %}<li>{{ n }}</li>{% endfor %}</ul>
       {% for z in O.zisky if z.k == k.id %}{% if loop.index <= 1 %}{{ m.citat(z) }}{% endif %}{% endfor %}
-      <a class="sipka" href="{{ url('kontakt') }}?zajem={{ k.id }}">Zeptat se na {{ k.nazev|lower if k.id != 'stav-clear' else 'cestu ke Clear' }}</a>
+      <a class="sipka" href="{{ url('kontakt') }}?zajem={{ k.id }}">Zeptat se na {{ k.nazev|lower if k.id != 'stav-clear' else 'cestu ke stavu Klír' }}</a>
     </article>
     {% endfor %}
   </div>
@@ -34,8 +34,7 @@
   <div class="wrap cesta-clear-in">
     <div class="cesta-clear-text">
       <h2 id="clear-h">Cesta k&nbsp;duchovní svobodě</h2>
-      <p>Procesy jsou uspořádané do stupňů. Krok za krokem zvyšují schopnosti a&nbsp;vědomí člověka. Začíná se knihou, končí se stavem Clear. Vedle toho můžeš projít kurzy Life Power kouče a&nbsp;sám (sama) vést ostatní.</p>
-      <p><a class="sipka" href="{{ base }}soubory/slovnik-life-power.pdf">Slovník pojmů (PDF)</a></p>
+      <p>Procesy jsou uspořádané do stupňů. Krok za krokem zvyšují schopnosti a&nbsp;vědomí člověka. Začíná se knihou, končí se stavem Klír. Vedle toho můžeš projít kurzy Life Power kouče a&nbsp;sám vést ostatní.</p>
     </div>
     <ol class="schody" role="list">
       {% for s in O.cesta %}

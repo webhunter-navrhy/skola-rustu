@@ -1,15 +1,15 @@
 {% extends "_base.html" %}
 {% import "_makra.html" as m with context %}
-{% set titulek = 'Zisky studentů – co přinesly kurzy a koučing LifePOWER | Škola růstu' %}
-{% set popis = 'Zisky studentů z kurzů a procesingů Life Power: komunikace, studium, sebedůvěra, vztahy, koučing. Vlastními slovy absolventů.' %}
-{% set cesta = 'zisky/' %}
+{% set titulek = 'Příběhy studentů – co přinesly kurzy a koučing LifePOWER | Škola růstu' %}
+{% set popis = 'Příběhy studentů z kurzů a procesingů Life Power: komunikace, studium, sebedůvěra, vztahy, koučing. Vlastními slovy absolventů.' %}
+{% set cesta = 'pribehy/' %}
 {% block obsah %}
 {% set O = data.obsah %}
 <section class="stranka-hlava">
   <div class="wrap stranka-hlava-in">
     <div>
-      <h1>Zisky studentů</h1>
-      <p class="hero-perex">Ziskem říkáme to, co si člověk z&nbsp;kurzu nebo procesingu odnese do života. Tady jsou vlastními slovy absolventů.</p>
+      <h1>Příběhy studentů</h1>
+      <p class="hero-perex">Představujeme příběhy studentů a absolventů procesingů, tedy to, co si odnesli do života a jak dokázali svůj život změnit. Vlastními slovy absolventů.</p>
     </div>
     <div class="stranka-obr">{{ img('pratele.png', 'Ilustrace z knihy LifePOWER: přátelé se psem sedí v trávě', sizes='(min-width: 64rem) 22rem, 60vw') }}</div>
   </div>
@@ -28,8 +28,8 @@
 </section>
 <section class="pruh-cta">
   <div class="wrap pruh-cta-in">
-    <p class="velky">Prošel (prošla) jsi kurzem nebo procesingem? Pošli nám svůj zisk, rádi ho tu zveřejníme.</p>
-    <a class="tl tl-hl" href="{{ url('kontakt') }}">Poslat zisk</a>
+    <p class="velky">Prošel jsi kurzem nebo procesingem? Pošli nám svůj příběh, rádi ho tu zveřejníme.</p>
+    <a class="tl tl-hl" href="{{ url('kontakt') }}">Poslat příběh</a>
   </div>
 </section>
 {% endblock %}
