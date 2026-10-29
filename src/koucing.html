@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 {% import "_makra.html" as m with context %}
 {% set titulek = 'Osobní koučing a procesingy LifePOWER v Praze | Škola růstu' %}
-{% set popis = 'Osobní koučing Life Power v Praze: klírovací proces, partnerské vztahy, rodičovství a výchova dětí, cesta ke stavu Klír. Program na míru s kvalifikovaným koučem.' %}
+{% set popis = 'Osobní koučing Life Power v Praze: procesy na nápravu života, partnerské vztahy, rodičovství a výchova dětí, cesta k duchovní svobodě. Program na míru s kvalifikovaným koučem.' %}
 {% set cesta = 'koucing/' %}
 {% block obsah %}
 {% set O = data.obsah %}
@@ -27,24 +27,6 @@
       <a class="sipka" href="{{ url('kontakt') }}?zajem={{ k.id }}">Máte zájem? Napište nám přes formulář</a>
     </article>
     {% endfor %}
-  </div>
-</section>
-
-<section class="cesta-clear" aria-labelledby="clear-h">
-  <div class="wrap cesta-clear-in">
-    <div class="cesta-clear-text">
-      <h2 id="clear-h">Cesta k&nbsp;duchovní svobodě</h2>
-      <p>Procesy jsou uspořádané do stupňů. Krok za krokem zvyšují schopnosti a&nbsp;vědomí člověka. Začíná se knihou, končí se stavem Klír. Vedle toho můžeš projít kurzy Life Power kouče a&nbsp;sám vést ostatní.</p>
-    </div>
-    <ol class="schody" role="list">
-      {% for s in O.cesta %}
-      <li class="schod{% if s.get("start") %} schod-start{% endif %}{% if s.get("cil") %} schod-cil{% endif %}" style="--i:{{ loop.index0 }}">
-        <span class="schod-kamen" aria-hidden="true"></span>
-        <div><h3>{{ s.nazev }}</h3><p>{{ s.text }}</p></div>
-        {% if s.get("start") %}<span class="rucne schod-rucne">Tady začínáš</span>{% endif %}
-      </li>
-      {% endfor %}
-    </ol>
   </div>
 </section>
 
