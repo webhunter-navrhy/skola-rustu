@@ -5,6 +5,7 @@
 #   ./deploy.sh --bez-qa     # bez závěrečného qa.py
 # Token: ~/.webhunter-gh-token (neukládá se do remote). Repo musí existovat (novy_web.py <slug> --repo).
 set -euo pipefail
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"   # gh pod ssh/launchd
 cd "$(dirname "$0")"
 DRY=0; QA=1
 for a in "$@"; do case "$a" in --dry) DRY=1;; --bez-qa) QA=0;; esac; done
