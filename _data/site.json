@@ -2,12 +2,12 @@
   "slug": "skola-rustu",
   "nazev": "Škola růstu – LifePOWER Praha",
   "kratky_nazev": "Škola růstu",
-  "url": "https://webhunter-navrhy.github.io/skola-rustu/",
-  "base": "/skola-rustu/",
+  "url": "https://skolarustu.cz/",
+  "base": "/",
   "lang": "cs",
   "popis": "Škola růstu – LifePOWER Praha: kurzy komunikace, studia a sebepoznání, osobní koučing a knihy edice Life Power. Strašnická, Praha 10.",
-  "navrh": true,
-  "domena": "life-pwr.cz",
+  "navrh": false,
+  "domena": "skolarustu.cz",
   "og_image": "kopec-vlajka.png",
   "logo": "logo.svg",
   "theme_color": "#fbfaf6",
@@ -25,7 +25,9 @@
     }
   },
   "oteviraci_doba": [],
-  "sameas": ["https://www.instagram.com/lifepower_cz/"],
+  "sameas": [
+    "https://www.instagram.com/lifepower_cz/"
+  ],
   "cenove_rozpeti": "",
   "formular": {
     "endpoint": "",
@@ -33,9 +35,21 @@
     "predmet": "Zpráva z webu Škola růstu"
   },
   "nav": [
-    {"text": "Kurzy", "href": "kurzy"},
-    {"text": "Koučing", "href": "koucing"},
-    {"text": "Knihy", "href": "knihy"},
-    {"text": "Příběhy studentů", "href": "pribehy"}
+    {
+      "text": "Kurzy",
+      "href": "kurzy"
+    },
+    {
+      "text": "Koučing",
+      "href": "koucing"
+    },
+    {
+      "text": "Knihy",
+      "href": "knihy"
+    },
+    {
+      "text": "Příběhy studentů",
+      "href": "pribehy"
+    }
   ]
 }
