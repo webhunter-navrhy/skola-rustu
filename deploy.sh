@@ -37,6 +37,8 @@ git push -q "$PUSH_URL" HEAD:main
 
 echo "== gh-pages (dist/)"
 TMP="$(mktemp -d)"; cp -R dist/. "$TMP/"; touch "$TMP/.nojekyll"
+DOMENA="$($PY -c 'import json;print(json.load(open("_data/site.json")).get("domena") or "")')"
+[ -n "$DOMENA" ] && echo "$DOMENA" > "$TMP/CNAME"   # jinak force push smaže vlastní doménu
 ( cd "$TMP" && git init -q -b gh-pages && git add -A \
   && git -c user.name="WebHunter" -c user.email="info@webhunter.cz" commit -q -m "build $(date +%F\ %H:%M)" \
   && git push -q -f "$PUSH_URL" gh-pages )
