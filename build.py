@@ -216,6 +216,18 @@ def main():
             fh.write(f"  <url><loc>{site['url']}{s}</loc><lastmod>{dnes}</lastmod></url>\n")
         fh.write("</urlset>\n")
     open(os.path.join(DIST, ".nojekyll"), "w").close()
+    # administrace (webhunter-admin): kopie admin/, version.json pro hlášení „web je aktuální", images.json = knihovna fotek
+    adm = os.path.join(ROOT, "admin")
+    if os.path.isdir(adm):
+        shutil.copytree(adm, os.path.join(DIST, "admin"))
+        ai = os.path.join(DIST, "admin", "index.html")
+        s = open(ai, encoding="utf-8").read()
+        for k, f in (("__V_ACSS__", "admin/admin.css"), ("__V_AJS__", "admin/admin.js")):
+            s = s.replace(k, hash_souboru(os.path.join(DIST, f)))
+        open(ai, "w", encoding="utf-8").write(s)
+    json.dump({"sha": os.environ.get("GITHUB_SHA", "local")}, open(os.path.join(DIST, "version.json"), "w"))
+    knih = sorted(os.path.relpath(os.path.join(d, f), IMG) for d, _, fs in os.walk(IMG) for f in fs if f.lower().endswith(RASTER))
+    json.dump(knih, open(os.path.join(DIST, "images.json"), "w"), ensure_ascii=False)
     if site.get("domena") and not navrh:
         open(os.path.join(DIST, "CNAME"), "w").write(site["domena"] + "\n")
 
