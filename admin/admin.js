@@ -194,7 +194,7 @@ function shell() {
       h('span', {}, h('a.btn.btn-s', { href: CFG.site, target: '_blank', rel: 'noopener' }, 'Zobrazit web'), ' ',
         h('button.btn.btn-s', { type: 'button', onclick: () => { if (dirty().length && !confirm('Máte neuložené změny. Opravdu se odhlásit?')) return; localStorage.removeItem(SK); S.sess = null; login(); } }, 'Odhlásit'))),
     h('div.wrap', {}, S.def ? h('div.banner', {}, 'Používáte výchozí heslo „admin“. Dole na stránce si nastavte vlastní.') : null, vTabs()),
-    h('div.savebar#savebar', {}, h('span', {}, ''),
+    h('div.savebar', { id: 'savebar' }, h('span', {}, ''),
       h('span', {}, h('button.btn.btn-s', { type: 'button', onclick: () => { if (confirm('Zahodit neuložené změny?')) location.reload(); } }, 'Zahodit'), ' ',
         h('button.btn.btn-p', { type: 'button', onclick: saveAll }, 'Uložit změny'))));
   bar();
